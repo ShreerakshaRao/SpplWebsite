@@ -14,13 +14,29 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    /* --background: #0a0a0a;
+    --foreground: #ededed; */
+
+    --PRIMARY-TEAL:  #008080; 
+    --PRIMARY-GRAY: #433E3F;
+
   }
 }
 
+@layer base {
 body {
-  background: var(--background);
-  color: var(--foreground);
+  /* background: var(--background); */
+  /* color: var(--foreground); */
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.bg-primaryTeal {
+  background-color: var(--PRIMARY-TEAL);
+
+}
+
+.border-Gray {
+  border-color: var(--PRIMARY-GRAY);
+
+}
 }
