@@ -155,6 +155,82 @@ const Home = () => {
           </div>
           <button className="bg-black text-white w-32 h-12">Search</button>
         </div>
+
+
+        <div className="font-serif font-light text-3xl">Deals of the Day</div>
+
+
+        <div className="flex space-x-2">
+          <div>
+            <div>
+              <Image
+                src="/medicines/Tramasud-P.svg"
+                alt="Company Logo"
+                width={350}
+                height={350}
+              />
+            </div>
+            <div className="w-[302px] h-[48px] flex justify-between px-5 items-center text-lg bg-[#F4F0EF] shadow-inner backdrop-blur-md  relative">
+              <span className="font-medium">₹200</span>
+              <span className="flex items-center space-x-1">
+                <span className="text-gray-500 line-through">₹230</span>
+                <span className="text-green-900">(21%)</span>
+              </span>
+            </div>
+          </div>
+
+          <div>
+            <div>
+              <Image
+                src="/medicines/Glimisud-M1-Tablets.svg"
+                alt="Company Logo"
+                width={350}
+                height={350}
+              />
+            </div>
+            <div className="w-[302px] h-[48px] flex justify-between px-5 items-center text-lg bg-[#F4F0EF] shadow-inner backdrop-blur-md  relative">
+              <span className="font-medium">₹200</span>
+              <span className="flex items-center space-x-1">
+                <span className="text-gray-500 line-through">₹230</span>
+                <span className="text-green-900">(21%)</span>
+              </span>
+            </div>
+          </div>
+          <div>
+            <div>
+              <Image
+                src="/medicines/Glimsud-MP2-Talets.svg"
+                alt="Company Logo"
+                width={350}
+                height={350}
+              />
+            </div>
+            <div className="w-[302px] h-[48px] flex justify-between px-5 items-center text-lg bg-[#F4F0EF] shadow-inner backdrop-blur-md  relative">
+              <span className="font-medium">₹200</span>
+              <span className="flex items-center space-x-1">
+                <span className="text-gray-500 line-through">₹230</span>
+                <span className="text-green-900">(21%)</span>
+              </span>
+            </div>
+          </div>
+          <div>
+            <div>
+              <Image
+                src="/medicines/Sudobose-0.3-Tablets.svg"
+                alt="Company Logo"
+                width={350}
+                height={350}
+              />
+            </div>
+            <div className="w-[302px] h-[48px] flex justify-between px-5 items-center text-lg bg-[#F4F0EF] shadow-inner backdrop-blur-md  relative">
+              <span className="font-medium">₹200</span>
+              <span className="flex items-center space-x-1">
+                <span className="text-gray-500 line-through">₹230</span>
+                <span className="text-green-900">(21%)</span>
+              </span>
+            </div>
+          </div>
+        </div>
       </main>
     </>
   );
