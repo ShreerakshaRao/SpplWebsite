@@ -3,18 +3,8 @@
 import React from "react";
 import Image from "next/image";
 import { Search } from "lucide-react";
-import Home from "./components/Home";
-import { IoLocationSharp, IoMail, IoLogoInstagram } from "react-icons/io5";
-import {
-  IoIosCall,
-  IoLogoFacebook,
-  IoLogoTwitter,
-  IoLogoRss,
-} from "react-icons/io";
-import { TiSocialLinkedin } from "react-icons/ti";
-import { FaPinterest, FaGooglePlusG } from "react-icons/fa6";
-import Categories from "./components/Categories";
-import Product from "./components/Product";
+
+import Link from "next/link";
 
 const layout = () => {
   return (
@@ -46,9 +36,11 @@ const layout = () => {
           </span>
         </div>
 
-        <div className="space-x-6 text-lg font-normal">
+        <div className="space-x-6 text-lg font-normal cursor-pointer">
           <span>Home</span>
-          <span>Categories</span>
+          <span>Products</span>
+          <Link href="/dashboard/categories">Categories</Link>
+          <span>About Us</span>
           <span>Contact Us</span>
         </div>
       </header>
@@ -56,7 +48,7 @@ const layout = () => {
       {/* <Home /> */}
 
       {/* <Categories/> */}
-      <Product/>
+      {/* <Product/> */}
 
       {/* <footer className="p-15 space-y-6">
         <div className="flex justify-between">
