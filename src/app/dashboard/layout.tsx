@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Search } from "lucide-react";
 
 import Link from "next/link";
+import About from "./components/About";
 
 const layout = () => {
   return (
@@ -49,6 +50,8 @@ const layout = () => {
 
       {/* <Categories/> */}
       {/* <Product/> */}
+
+      <About/>
 
       {/* <footer className="p-15 space-y-6">
         <div className="flex justify-between">

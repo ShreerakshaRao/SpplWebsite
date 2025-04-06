@@ -19,7 +19,7 @@
 
     --PRIMARY-TEAL:  #008080; 
     --PRIMARY-GRAY: #433E3F;
-
+    --SECONDARY-GRAY: #444444;
   }
 }
 
@@ -38,5 +38,9 @@ body {
 .border-Gray {
   border-color: var(--PRIMARY-GRAY);
 
+}
+
+.text_Gray {
+  text :var(--SECONDARY-GRAY);
 }
 }
