@@ -2,8 +2,11 @@
 
 import React from "react";
 import Image from "next/image";
+import { useSearch } from "../context/SearchContext";
 
-const Categories = () => {
+const page = () => {
+  const { query } = useSearch();
+
   const categories = [
     "Antibacterial",
     "Pain-Killers",
@@ -14,8 +17,12 @@ const Categories = () => {
     "Calcium",
     "Iron",
     "Enzyme",
-    "Diabeties"
+    "Diabeties",
   ];
+
+  const filteredCategories = categories.filter((category) =>
+    category.toLowerCase().includes(query.toLowerCase())
+  );
   return (
     <>
       <main className="px-15 space-y-10">
@@ -34,22 +41,26 @@ const Categories = () => {
 
         <div className="border-b-2 border-gray-400"></div>
 
-
-
         <div className="flex flex-wrap gap-16">
-          {categories.map((category) => (
-            <Image
-              key={category}
-              src={`/categories/${category}.svg`}
-              alt={category}
-              width={220}
-              height={220}
-            />
-          ))}
+          {filteredCategories.length > 0 ? (
+            filteredCategories.map((category) => (
+              <Image
+                key={category}
+                src={`/categories/${category}.svg`}
+                alt={category}
+                width={220}
+                height={220}
+              />
+            ))
+          ) : (
+            <div className="text-xl text-gray-400">
+              No matching categories found.
+            </div>
+          )}
         </div>
       </main>
     </>
   );
 };
 
-export default Categories;
+export default page;

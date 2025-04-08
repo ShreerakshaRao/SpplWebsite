@@ -41,6 +41,6 @@ body {
 }
 
 .text_Gray {
-  text :var(--SECONDARY-GRAY);
+  color :var(--SECONDARY-GRAY);
 }
 }

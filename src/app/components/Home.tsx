@@ -21,7 +21,7 @@ const Home = () => {
             />
           </span>
         </div>
-        <div className="border-b-4 border-gray-400"></div>
+        <div className="border-b-2 border-gray-400"></div>
         <div className="font-serif font-light text-3xl">New Lauches</div>
 
         <div className="flex space-x-2">
@@ -78,7 +78,6 @@ const Home = () => {
             </div>
           </div>
 
-          
           <div>
             <div>
               <Image
@@ -158,9 +157,7 @@ const Home = () => {
           <button className="bg-black text-white w-32 h-12">Search</button>
         </div>
 
-
         <div className="font-serif font-light text-3xl">Deals of the Day</div>
-
 
         <div className="flex space-x-2">
           <div>

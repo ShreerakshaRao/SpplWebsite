@@ -5,8 +5,9 @@ import Image from "next/image";
 import { RxMixerVertical } from "react-icons/rx";
 import { IoFilterSharp } from "react-icons/io5";
 import { MdKeyboardArrowDown } from "react-icons/md";
+import { useSearch } from "../context/SearchContext";
 
-const ProductCard = ({ image, price, originalPrice, discount }: any) => (
+const ProductCard = ({ image, price, units, discount }: any) => (
   <div>
     <div>
       <Image src={image} alt="Product Image" width={350} height={350} />
@@ -14,207 +15,168 @@ const ProductCard = ({ image, price, originalPrice, discount }: any) => (
     <div className="w-[302px] h-[48px] flex justify-between px-5 items-center text-lg bg-[#F4F0EF] shadow-inner backdrop-blur-md relative">
       <span className="font-medium">₹{price}</span>
       <span className="flex items-center space-x-1">
-        <span className="text-gray-500 line-through">₹{originalPrice}</span>
-        <span className="text-green-900">({discount})</span>
+        <span className="text-gray-500">{units}</span>
       </span>
     </div>
   </div>
 );
 
-// ✅ Product data array
 const products = [
   {
     image: "/medicines/Sudofer-XT-Tablet.svg",
-    price: 200,
-    originalPrice: 230,
-    discount: "21%",
+    price: 105.0,
+    units: "Per Strip",
   },
   {
     image: "/medicines/Sudofer-Syrup.svg",
-    price: 200,
-    originalPrice: 230,
-    discount: "21%",
+    price: 108,
+    units: "Per Pcs",
   },
   {
     image: "/medicines/Sudzyme-Syrup.svg",
-    price: 200,
-    originalPrice: 230,
-    discount: "21%",
+    price: 105,
+    units: "Per Bottel",
   },
   {
     image: "/medicines/Sudofer-Injection.svg",
-    price: 200,
-    originalPrice: 230,
-    discount: "21%",
+    price: 220,
+    units: "Per Injection",
   },
   {
     image: "/medicines/Tramasud-P.svg",
-    price: 200,
-    originalPrice: 230,
-    discount: "21%",
+    price: 90,
+    units: "Per Strip",
   },
   {
     image: "/medicines/Glimisud-M1-Tablets.svg",
-    price: 200,
-    originalPrice: 230,
-    discount: "21%",
+    price: 40,
+    units: "Per Strip",
   },
-
-
 
   {
     image: "/medicines/Glimsud-MP2-Talets.svg",
-    price: 200,
-    originalPrice: 230,
-    discount: "21%",
+    price: 65,
+    units: "Per Strip",
   },
   {
     image: "/medicines/Sudobose-0.3-Tablets.svg",
-    price: 200,
-    originalPrice: 230,
-    discount: "21%",
+    price: 82.5,
+    units: "Per Strip",
   },
   {
     image: "/medicines/Sudsulb-Injection.svg",
-    price: 200,
-    originalPrice: 230,
-    discount: "21%",
+    price: 185,
+    units: "Per Injection",
   },
-
-
-  
-
-
 
   {
     image: "/medicines/Cefisud-100-Tablets.svg",
-    price: 200,
-    originalPrice: 230,
-    discount: "21%",
+    price: 90,
+    units: "Per Strip",
   },
   {
     image: "/medicines/Cefisud-200-Tablets.svg",
-    price: 200,
-    originalPrice: 230,
-    discount: "21%",
+    price: 109,
+    units: "Per Strip",
   },
   {
     image: "/medicines/Sudofenac-MR Tablets.svg",
-    price: 200,
-    originalPrice: 230,
-    discount: "21%",
+    price: 95,
+    units: "Per Strip",
   },
 
   {
     image: "/medicines/Sudzee-500 Tablets.svg",
-    price: 200,
-    originalPrice: 230,
-    discount: "21%",
+    price: 110,
+    units: "Per Strip",
   },
   {
     image: "/medicines/Sudorox DT Tablets.svg",
-    price: 200,
-    originalPrice: 230,
-    discount: "21%",
+    price: 82,
+    units: "Per Strip",
   },
   {
     image: "/medicines/Sudofenac-SP Tablets.svg",
-    price: 200,
-    originalPrice: 230,
-    discount: "21%",
+    price: 105,
+    units: "Per Strip",
   },
-
-
 
   {
     image: "/medicines/Tramasud.svg",
-    price: 200,
-    originalPrice: 230,
-    discount: "21%",
+    price: 26,
+    units: "Per Injection",
   },
   {
     image: "/medicines/Sudoxycalv-625-Tablets.svg",
-    price: 200,
-    originalPrice: 230,
-    discount: "21%",
+    price: 204,
+    units: "Per Strip",
   },
   {
     image: "/medicines/Sudocal-Suspension.svg",
-    price: 200,
-    originalPrice: 230,
-    discount: "21%",
+    price: 110,
+    units: "Per Bottle",
   },
-
-
-
-
-
 
   {
     image: "/medicines/Painsud.svg",
-    price: 200,
-    originalPrice: 230,
-    discount: "21%",
+    price: 99,
+    units: "Per Bottle",
   },
   {
     image: "/medicines/Panosud-40-Tablets.svg",
-    price: 200,
-    originalPrice: 230,
-    discount: "21%",
+    price: 40,
+    units: "Per Strip",
   },
   {
     image: "/medicines/Panosud-DSR-Capsules.svg",
-    price: 200,
-    originalPrice: 230,
-    discount: "21%",
+    price: 90,
+    units: "Per Strip",
   },
-
-
 
   {
     image: "/medicines/Parsud-650-Tablets.svg",
-    price: 200,
-    originalPrice: 230,
-    discount: "21%",
+    price: 20,
+    units: "Per Strip",
   },
   {
     image: "/medicines/Sudocal-500-Tablets.svg",
-    price: 200,
-    originalPrice: 230,
-    discount: "21%",
+    price: 100,
+    units: "Per Strip",
   },
   {
     image: "/medicines/Sudoxicab-90-Tablets.svg",
-    price: 200,
-    originalPrice: 230,
-    discount: "21%",
+    price: 100,
+    units: "Per Strip",
   },
   {
     image: "/medicines/Sudonem-Injection.svg",
-    price: 200,
-    originalPrice: 230,
-    discount: "21%",
+    price: 13.35,
+    units: "Per Bottle",
   },
 
   {
     image: "/medicines/Panosud-Injection.svg",
-    price: 200,
-    originalPrice: 230,
-    discount: "21%",
+    price: 55,
+    units: "Per Injection",
   },
   {
     image: "/medicines/Sudofast-Gel.svg",
-    price: 200,
-    originalPrice: 230,
-    discount: "21%",
+    price: 90,
+    units: "Per Gel",
   },
-
 ];
 
+const page = () => {
+  const { query } = useSearch();
 
-const Product = () => {
+  const filteredProducts = products.filter((product) => {
+    const name = product.image
+      .split("/medicines/")[1]
+      ?.replace(".svg", "")
+      ?.toLowerCase();
+    return name?.includes(query.toLowerCase());
+  });
 
-  
   return (
     <>
       <main className="">
@@ -304,11 +266,17 @@ const Product = () => {
           </div>
 
           <div>
-          <div className="px-15 py-6 grid grid-cols-3 gap-9">
-          {products.map((product, idx) => (
-            <ProductCard key={idx} {...product} />
-          ))}
-        </div>
+            <div className="px-15 py-6 grid grid-cols-3 gap-9">
+              {filteredProducts.length > 0 ? (
+                filteredProducts.map((product, idx) => (
+                  <ProductCard key={idx} {...product} />
+                ))
+              ) : (
+                <div className="col-span-3 text-gray-400 text-xl">
+                  No matching products found.
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </main>
@@ -316,4 +284,4 @@ const Product = () => {
   );
 };
 
-export default Product;
+export default page;
