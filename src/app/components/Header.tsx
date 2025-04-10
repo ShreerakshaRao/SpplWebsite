@@ -27,10 +27,10 @@ const Header = () => {
       <div className="flex space-x-14">
         <span>
           <Image
-            src="/SudhanandLogo.svg"
+            src="/SudhanandLogo1.svg"
             alt="Company Logo"
-            width={70}
-            height={70}
+            width={40}
+            height={40}
           />
         </span>
         <span>

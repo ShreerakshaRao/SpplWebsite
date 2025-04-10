@@ -4,11 +4,59 @@ import React from "react";
 import Image from "next/image";
 
 const Home = () => {
+  const products = [
+    {
+      image: "/medicines/Sudofer-XT-Tablet.svg",
+      price: 105.0,
+      units: "Per Strip",
+    },
+    {
+      image: "/medicines/Sudofer-Syrup.svg",
+      price: 108,
+      units: "Per Pcs",
+    },
+    {
+      image: "/medicines/Sudzyme-Syrup.svg",
+      price: 105,
+      units: "Per Bottel",
+    },
+    {
+      image: "/medicines/Sudofer-Injection.svg",
+      price: 220,
+      units: "Per Injection",
+    },
+  ];
+
+  const products1 = [
+    {
+      image: "/medicines/Tramasud-P.svg",
+      price: 90,
+      units: "Per Strip",
+    },
+    {
+      image: "/medicines/Glimisud-M1-Tablets.svg",
+      price: 40,
+      units: "Per Strip",
+    },
+
+    {
+      image: "/medicines/Glimsud-MP2-Talets.svg",
+      price: 65,
+      units: "Per Strip",
+    },
+    {
+      image: "/medicines/Sudobose-0.3-Tablets.svg",
+      price: 82.5,
+      units: "Per Strip",
+    },
+  ];
+
   return (
     <>
-      <main className="px-15 space-y-10">
-        <div className="flex justify-between py-2">
-          <span className="flex text-6xl font-light font-serif leading-20 items-center">
+      <main className="space-y-15">
+        {/* <div className="flex justify-between py-2"> */}
+        <div className="flex justify-between py-2 bg-[url(/Background.svg)] h-96 bg-no-repeat bg-cover bg-center">
+          {/* <span className="flex text-6xl font-light font-serif leading-20 items-center">
             Discover <br /> trusted medicines <br />
             at your fingertips!
           </span>
@@ -19,86 +67,36 @@ const Home = () => {
               width={150}
               height={300}
             />
-          </span>
+          </span> */}
         </div>
-        <div className="border-b-2 border-gray-400"></div>
-        <div className="font-serif font-light text-3xl">New Lauches</div>
+        <div className="font-serif font-light text-3xl px-15">New Lauches</div>
 
-        <div className="flex space-x-2">
-          <div>
-            <div>
-              <Image
-                src="/medicines/Sudofer-XT-Tablet.svg"
-                alt="Company Logo"
-                width={350}
-                height={350}
-              />
+        <div className="flex space-x-8 px-15 overflow-x-auto">
+          {products.map((product, idx) => (
+            <div key={idx} className="flex-shrink-0">
+              <div>
+                <Image
+                  src={product.image}
+                  alt="Product Name"
+                  width={320}
+                  height={320}
+                  className="rounded-lg"
+                />
+              </div>
+              <div className="w-[302px] h-[48px] flex justify-between px-5 items-center text-lg bg-[#F4F0EF] shadow-inner backdrop-blur-md">
+                <span className="font-medium">₹{product.price}</span>
+                <span className="flex items-center space-x-1">
+                  <span className="text-gray-500">{product.units}</span>
+                </span>
+              </div>
             </div>
-            <div className="w-[302px] h-[48px] flex justify-between px-5 items-center text-lg bg-[#F4F0EF] shadow-inner backdrop-blur-md  relative">
-              <span className="font-medium">₹200</span>
-              <span className="flex items-center space-x-1">
-                <span className="text-gray-500 line-through">₹230</span>
-                <span className="text-green-900">(21%)</span>
-              </span>
-            </div>
-          </div>
-
-          <div>
-            <div>
-              <Image
-                src="/medicines/Sudofer-Syrup.svg"
-                alt="Company Logo"
-                width={350}
-                height={350}
-              />
-            </div>
-            <div className="w-[302px] h-[48px] flex justify-between px-5 items-center text-lg bg-[#F4F0EF] shadow-inner backdrop-blur-md  relative">
-              <span className="font-medium">₹200</span>
-              <span className="flex items-center space-x-1">
-                <span className="text-gray-500 line-through">₹230</span>
-                <span className="text-green-900">(21%)</span>
-              </span>
-            </div>
-          </div>
-          <div>
-            <div>
-              <Image
-                src="/medicines/Sudzyme-Syrup.svg"
-                alt="Company Logo"
-                width={350}
-                height={350}
-              />
-            </div>
-            <div className="w-[302px] h-[48px] flex justify-between px-5 items-center text-lg bg-[#F4F0EF] shadow-inner backdrop-blur-md  relative">
-              <span className="font-medium">₹200</span>
-              <span className="flex items-center space-x-1">
-                <span className="text-gray-500 line-through">₹230</span>
-                <span className="text-green-900">(21%)</span>
-              </span>
-            </div>
-          </div>
-
-          <div>
-            <div>
-              <Image
-                src="/medicines/Sudofer-Injection.svg"
-                alt="Company Logo"
-                width={350}
-                height={350}
-              />
-            </div>
-            <div className="w-[302px] h-[48px] flex justify-between px-5 items-center text-lg bg-[#F4F0EF] shadow-inner backdrop-blur-md  relative">
-              <span className="font-medium">₹200</span>
-              <span className="flex items-center space-x-1">
-                <span className="text-gray-500 line-through">₹230</span>
-                <span className="text-green-900">(21%)</span>
-              </span>
-            </div>
-          </div>
+          ))}
         </div>
 
-        <div className="font-serif font-light text-3xl">Shop By Categories</div>
-        <div className="flex space-x-4">
+        <div className="font-serif font-light text-3xl px-15">
+          Shop By Categories
+        </div>
+        <div className="flex space-x-4 px-15 ">
           <span>
             <Image
               src="/categories/Antibacterial.svg"
@@ -154,81 +152,33 @@ const Home = () => {
             Sign up today and get 10% off your first <br /> order—your health,
             your savings!
           </div>
-          <button className="bg-black text-white w-32 h-12">Search</button>
+          <button className="bg-black text-white w-32 h-12">Contact Us</button>
         </div>
 
-        <div className="font-serif font-light text-3xl">Deals of the Day</div>
+        <div className="font-serif font-light text-3xl px-15">
+          Deals of the Day
+        </div>
 
-        <div className="flex space-x-2">
-          <div>
-            <div>
-              <Image
-                src="/medicines/Tramasud-P.svg"
-                alt="Company Logo"
-                width={350}
-                height={350}
-              />
+        <div className="flex space-x-8 px-15 overflow-x-auto">
+          {products1.map((product, idx) => (
+            <div key={idx} className="flex-shrink-0">
+              <div>
+                <Image
+                  src={product.image}
+                  alt="Product Name"
+                  width={320}
+                  height={320}
+                  className="rounded-lg"
+                />
+              </div>
+              <div className="w-[302px] h-[48px] flex justify-between px-5 items-center text-lg bg-[#F4F0EF] shadow-inner backdrop-blur-md">
+                <span className="font-medium">₹{product.price}</span>
+                <span className="flex items-center space-x-1">
+                  <span className="text-gray-500">{product.units}</span>
+                </span>
+              </div>
             </div>
-            <div className="w-[302px] h-[48px] flex justify-between px-5 items-center text-lg bg-[#F4F0EF] shadow-inner backdrop-blur-md  relative">
-              <span className="font-medium">₹200</span>
-              <span className="flex items-center space-x-1">
-                <span className="text-gray-500 line-through">₹230</span>
-                <span className="text-green-900">(21%)</span>
-              </span>
-            </div>
-          </div>
-
-          <div>
-            <div>
-              <Image
-                src="/medicines/Glimisud-M1-Tablets.svg"
-                alt="Company Logo"
-                width={350}
-                height={350}
-              />
-            </div>
-            <div className="w-[302px] h-[48px] flex justify-between px-5 items-center text-lg bg-[#F4F0EF] shadow-inner backdrop-blur-md  relative">
-              <span className="font-medium">₹200</span>
-              <span className="flex items-center space-x-1">
-                <span className="text-gray-500 line-through">₹230</span>
-                <span className="text-green-900">(21%)</span>
-              </span>
-            </div>
-          </div>
-          <div>
-            <div>
-              <Image
-                src="/medicines/Glimsud-MP2-Talets.svg"
-                alt="Company Logo"
-                width={350}
-                height={350}
-              />
-            </div>
-            <div className="w-[302px] h-[48px] flex justify-between px-5 items-center text-lg bg-[#F4F0EF] shadow-inner backdrop-blur-md  relative">
-              <span className="font-medium">₹200</span>
-              <span className="flex items-center space-x-1">
-                <span className="text-gray-500 line-through">₹230</span>
-                <span className="text-green-900">(21%)</span>
-              </span>
-            </div>
-          </div>
-          <div>
-            <div>
-              <Image
-                src="/medicines/Sudobose-0.3-Tablets.svg"
-                alt="Company Logo"
-                width={350}
-                height={350}
-              />
-            </div>
-            <div className="w-[302px] h-[48px] flex justify-between px-5 items-center text-lg bg-[#F4F0EF] shadow-inner backdrop-blur-md  relative">
-              <span className="font-medium">₹200</span>
-              <span className="flex items-center space-x-1">
-                <span className="text-gray-500 line-through">₹230</span>
-                <span className="text-green-900">(21%)</span>
-              </span>
-            </div>
-          </div>
+          ))}
         </div>
       </main>
     </>

@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import Image from "next/image";
 import {
   IoLocationSharp,
@@ -13,6 +15,11 @@ import { FaGooglePlusG } from "react-icons/fa";
 import { FaPinterest } from "react-icons/fa6";
 import Link from "next/link";
 
+interface FormData {
+  name: string;
+  email: string;
+  message: string;
+}
 const Footer = () => {
   const navLinks = [
     {
@@ -39,10 +46,56 @@ const Footer = () => {
     <IoLogoRss key="rss" />,
   ];
 
+  const [formData, setFormData] = useState<FormData>({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [loading, setLoading] = useState(false);
+  const [responseMessage, setResponseMessage] = useState("");
+
+  // Handle Input Changes
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    console.log(`Updating ${name}:`, value); // Debugging
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  // Handle Form Submission
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setLoading(true);
+    setResponseMessage("");
+
+    try {
+      const response = await fetch("/api/email", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setResponseMessage("Your message has been sent successfully.");
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        setResponseMessage(
+          "Failed to send the message. Please try again later."
+        );
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      setResponseMessage("An error occurred while sending the message.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
-    <footer className="p-15 space-y-6">
+    <footer className="mt-20 p-15 space-y-6 bg-[#003636] text-white">
       <div className="flex justify-between">
-        <div className=" space-y-7">
+        <div className=" space-y-7"> 
           <div>
             {" "}
             <Image
@@ -104,25 +157,56 @@ const Footer = () => {
             <h2 className="text-xl font-medium">Contact Us</h2>
 
             <div className="space-y-4">
-              <input
-                type="text"
-                placeholder="Name"
-                className="w-full p-3 bg-[#F4F0EF]  outline-none"
-              />
+              <form className="space-y-4" onSubmit={handleSubmit}>
+                <input
+                  id="name"
+                  name="name"
+                  type="text"
+                  placeholder="Name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  className="w-full p-3 bg-[#F4F0EF]  outline-none text-gray-500"
+                />
 
-              <input
-                type="email"
-                placeholder="Email"
-                className="w-full p-3 bg-[#F4F0EF] outline-none"
-              />
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                  placeholder="Email"
+                  className="w-full p-3 bg-[#F4F0EF] outline-none text-gray-500"
+                />
 
-              <textarea
-                placeholder="Message"
-                className="w-full p-3 bg-[#F4F0EF] outline-none focus:outline-none focus:ring-0"
-                rows={6}
-              ></textarea>
+                <textarea
+                  id="message"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
+                  placeholder="Message"
+                  className="w-full p-3 bg-[#F4F0EF] outline-none focus:outline-none focus:ring-0 text-gray-500"
+                  rows={6}
+                ></textarea>
 
-              <button className="w-40 bg-[#0A72BB] text-white p-3">Send</button>
+                <button
+                  type="submit"
+                  disabled={
+                    loading ||
+                    !formData.name ||
+                    !formData.email ||
+                    !formData.message
+                  }
+                  className="w-40 bg-[#0A72BB] text-white p-3"
+                >
+                  {loading ? "Sending..." : "Send"}
+                </button>
+
+                {responseMessage && (
+                  <p className="mt-4 text-gray-600">{responseMessage}</p>
+                )}
+              </form>
             </div>
           </div>
         </div>
