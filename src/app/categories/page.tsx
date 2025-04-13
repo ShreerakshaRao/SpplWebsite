@@ -3,6 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { useSearch } from "../context/SearchContext";
+import Link from "next/link";
 
 const page = () => {
   const { query } = useSearch();
@@ -44,13 +45,18 @@ const page = () => {
         <div className="flex flex-wrap gap-16">
           {filteredCategories.length > 0 ? (
             filteredCategories.map((category) => (
-              <Image
+              <Link
                 key={category}
-                src={`/categories/${category}.svg`}
-                alt={category}
-                width={220}
-                height={220}
-              />
+                href={`/products?category=${encodeURIComponent(category)}`}
+              >
+                <Image
+                  src={`/categories/${category}.svg`}
+                  alt={category}
+                  width={220}
+                  height={220}
+                  className="cursor-pointer"
+                />
+              </Link>
             ))
           ) : (
             <div className="text-xl text-gray-400">
