@@ -14,10 +14,11 @@ const ProductDetails = ({ params }: Props) => {
   if (!product) return <div className="m-10">Product not found.</div>;
 
   return (
-    <div className="p-15 flex justify-between">
-      <div>
+    <div className="p-4 md:p-15 flex flex-col md:flex-row justify-between space-y-8 md:space-y-0">
+      {/* Product Info Section */}
+      <div className="flex-1">
         <div className="text-4xl font-normal font-serif">{product.name}</div>
-        <div className="flex space-x-3 items-center mt-10">
+        <div className="flex space-x-3 items-center mt-5">
           <div className="text-2xl font-bold">₹{product.price}</div>
           <div className="text-base font-normal">{product.units}</div>
         </div>
@@ -38,7 +39,7 @@ const ProductDetails = ({ params }: Props) => {
           </div>
 
           <div className="mt-3 space-y-1">
-            <div className="text-base font-medium">Benifits & Uses</div>
+            <div className="text-base font-medium">Benefits & Uses</div>
             <div
               className="text-base font-normal text-[#313030]"
               dangerouslySetInnerHTML={{ __html: product.description }}
@@ -47,16 +48,16 @@ const ProductDetails = ({ params }: Props) => {
         </div>
       </div>
 
-      <div className="w-[500px] h-[500px] overflow-hidden bg-[#F4F0EF] flex items-center justify-center shadow-md">
-  <Image
-    src={product.image}
-    alt={product.slug}
-    width={450}
-    height={450}
-    className="object-contain"
-  />
-</div>
-
+      {/* Product Image Section */}
+      <div className="w-full md:w-[500px] h-[500px] overflow-hidden bg-[#F4F0EF] flex items-center justify-center shadow-md">
+        <Image
+          src={product.image}
+          alt={product.slug}
+          width={450}
+          height={450}
+          className="object-contain"
+        />
+      </div>
     </div>
   );
 };

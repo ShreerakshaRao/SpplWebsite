@@ -4,36 +4,32 @@ import React from "react";
 import Image from "next/image";
 
 const page = () => {
-  const teams = [
-    "Img1",
-    "Img2",
-    "Img3",
-    "Img4",
-    "Img5",
-    "Img6",
- 
-  ];
+  const teams = ["Img1", "Img2", "Img3", "Img4", "Img5", "Img6"];
   const founders = ["Img7", "Img8"];
 
   return (
     <>
-      <main className=" space-y-3">
-        <div className="flex p-15 items-center space-x-28">
+      <main className="space-y-3">
+
+
+        <div className="flex flex-col md:flex-row p-15 items-start md:space-x-28 space-y-6 md:space-y-0">
           <div className="text-base font-normal">
-            Browse through our extensive
+          Browse through our extensive
             <br /> collection of medicines, <br />
             wellness products, and <br />
             healthcare essentials
           </div>
           <div className="text-4xl font-normal font-serif">
-            About Sudhanand
+          About Sudhanand
             <br />
             Pharmacies Pvt. Ltd.
           </div>
         </div>
+
         <div className="border-b-2 border-gray-400"></div>
 
-        <div className="m-20 px-55 space-y-5 text-xl font-medium leading-relaxed text_Gray">
+        {/* Company Description */}
+        <div className="m-20 px-5 md:px-55 space-y-5 text-xl font-medium leading-normal md:leading-relaxed text_Gray">
           <p>
             This company, Sudhanand Pharmacies Pvt. Ltd., was established by the
             Sudhanand Group in early 2023 to consolidate all the pharmacies
@@ -52,7 +48,7 @@ const page = () => {
             house dedicated pharmacies managed by Sudhanand Pharmacies Pvt. Ltd.
             This ensures seamless support for patients’ medicine requirements,
             providing them with high-quality pharmaceutical products right
-            within the hospital premises
+            within the hospital premises.
           </p>
           <p>
             In addition to catering to the needs of our hospitals, Sudhanand
@@ -71,13 +67,13 @@ const page = () => {
           </p>
         </div>
 
+        {/* Founders Section */}
         <div className="text-center py-20">
           <h1 className="text-4xl font-normal font-serif mb-10">
             Our Founders
           </h1>
-
           <div className="flex justify-center">
-            <div className="grid grid-cols-2 gap-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
               {founders.map((founder) => (
                 <Image
                   key={founder}
@@ -91,11 +87,11 @@ const page = () => {
           </div>
         </div>
 
+        {/* Team Section */}
         <div className="text-center py-20">
           <h1 className="text-4xl font-normal font-serif mb-10">Our Team</h1>
-
           <div className="flex justify-center">
-            <div className="grid grid-cols-3 gap-10">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
               {teams.map((team) => (
                 <Image
                   key={team}

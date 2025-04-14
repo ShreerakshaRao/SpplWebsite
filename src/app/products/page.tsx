@@ -14,9 +14,7 @@ const ProductCard = ({ image, price, units, slug, name }: any) => (
   <Link href={`/products/${slug}`}>
     <div className="cursor-pointer mx-3">
       <Image src={image} alt="Product Image" width={250} height={250} />
-      <div className="text-base font-medium mb-3 px-3">
-        {name}
-      </div>
+      <div className="text-base font-medium mb-3 px-3">{name}</div>
       <div className="w-[302px] h-[48px] flex justify-between px-5 items-center text-lg bg-[#F4F0EF] shadow-inner backdrop-blur-md relative">
         <span className="font-medium">₹{price}</span>
         <span className="flex items-center space-x-1 text-gray-500">
@@ -92,127 +90,114 @@ const page = () => {
   }, [categoryFromURL]);
 
   return (
-    <>
-      <main className="">
-        <div className="flex p-15 items-center space-x-28">
-          <div className="text-base font-normal">
-            Browse through our extensive
-            <br /> collection of medicines, <br />
-            wellness products, and <br />
-            healthcare essentials
-          </div>
-          <div className="text-4xl font-normal font-serif">
-            Looking for a Medicine? We've
-            <br />
-            Got You Covered!
+    <main className="relative">
+      <div className="flex flex-col md:flex-row p-15 items-start md:space-x-28 space-y-6 md:space-y-0">
+        <div className="text-base font-normal">
+          Browse through our extensive
+          <br /> collection of medicines, <br />
+          wellness products, and <br />
+          healthcare essentials
+        </div>
+        <div className="text-4xl font-normal font-serif">
+          Looking for a Medicine? We've
+          <br />
+          Got You Covered!
+        </div>
+      </div>
+
+      <div className="flex justify-between px-15 pb-4 text-sm font-normal">
+        <div className="flex items-center space-x-44 hidden md:flex">
+          <div>Filters</div>
+          <div>
+            <RxMixerVertical />
           </div>
         </div>
 
-        <div className="flex justify-between px-15 pb-4 text-sm font-normal">
-          <div className="flex items-center space-x-44">
-            <div>Filters</div>
-            <div>
-              <RxMixerVertical />
-            </div>
-          </div>
-
-          <div className="flex items-center space-x-4">
-            <div>Sort By</div>
-            <div>
-              <IoFilterSharp />
-            </div>
+        <div className="flex items-center space-x-4 hidden md:flex">
+          <div>Sort By</div>
+          <div>
+            <IoFilterSharp />
           </div>
         </div>
+      </div>
 
-        <div className="border-b-2 border-gray-400"></div>
+      <div className="border-b-2 border-gray-400"></div>
 
-        <div className="flex min-h-screen">
-          <div className="border-r-2 border-gray-400 w-80 min-h-screen px-15 text-sm font-normal">
-            {/* <div className="pt-5 pb-3 border-b-2 border-gray-400 flex justify-between">
-              <div>Category</div>
-              <div>
-                <MdKeyboardArrowDown />
-              </div>
-            </div> */}
-
-            <div
-              className="pt-5 pb-3 border-b-2 border-gray-400 flex justify-between cursor-pointer"
-              onClick={() => setIsOpen(!isOpen)}
-            >
-              <div>Category</div>
-              <div>
-                {isOpen ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}
-              </div>
-            </div>
-
-            {isOpen && (
-              <div className="pl-2 mt-2 space-y-2">
-                {categories.map((category) => (
-                  <label key={category} className="flex items-center space-x-2">
-                    <input
-                      type="checkbox"
-                      checked={selectedCategories.includes(category)}
-                      onChange={() => toggleCategory(category)}
-                    />
-                    <span>{category}</span>
-                  </label>
-                ))}
-              </div>
-            )}
-
-            <div className="pt-5 pb-3 border-b-2 border-gray-400 flex justify-between">
-              <div>Price</div>
-              <div>
-                <MdKeyboardArrowDown />
-              </div>
-            </div>
-
+      <div className="flex min-h-screen">
+        <div className="border-r-2 border-gray-400 w-80 min-h-screen px-15 text-sm font-normal hidden md:block">
+          <div
+            className="pt-5 pb-3 border-b-2 border-gray-400 flex justify-between cursor-pointer"
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            <div>Category</div>
             <div>
-              <button className="p-3 bg-primaryTeal text-white w-48 my-5">
-                Clear Filter
-              </button>
+              {isOpen ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}
             </div>
+          </div>
 
-            <div className="space-y-6 mt-7">
-              <Image
-                src="/Image2.svg"
-                alt="Company Logo"
-                width={350}
-                height={350}
-              />
+          {isOpen && (
+            <div className="pl-2 mt-2 space-y-2">
+              {categories.map((category) => (
+                <label key={category} className="flex items-center space-x-2">
+                  <input
+                    type="checkbox"
+                    checked={selectedCategories.includes(category)}
+                    onChange={() => toggleCategory(category)}
+                  />
+                  <span>{category}</span>
+                </label>
+              ))}
+            </div>
+          )}
 
-              <Image
-                src="/Image3.svg"
-                alt="Company Logo"
-                width={350}
-                height={350}
-              />
-
-              <Image
-                src="/Image4.svg"
-                alt="Company Logo"
-                width={350}
-                height={350}
-              />
+          <div className="pt-5 pb-3 border-b-2 border-gray-400 flex justify-between">
+            <div>Price</div>
+            <div>
+              <MdKeyboardArrowDown />
             </div>
           </div>
 
           <div>
-            <div className="px-15 py-6 grid grid-cols-3 gap-9">
-              {filteredProducts.length > 0 ? (
-                filteredProducts.map((product, idx) => (
-                  <ProductCard key={idx} {...product} />
-                ))
-              ) : (
-                <div className="col-span-3 text-gray-400 text-xl">
-                  No matching products found.
-                </div>
-              )}
-            </div>
+            <button className="p-3 bg-primaryTeal text-white w-48 my-5">
+              Clear Filter
+            </button>
+          </div>
+
+          <div className="space-y-6 mt-7 hidden md:block">
+            <Image
+              src="/Image2.svg"
+              alt="Company Logo"
+              width={350}
+              height={350}
+            />
+            <Image
+              src="/Image3.svg"
+              alt="Company Logo"
+              width={350}
+              height={350}
+            />
+            <Image
+              src="/Image4.svg"
+              alt="Company Logo"
+              width={350}
+              height={350}
+            />
           </div>
         </div>
-      </main>
-    </>
+
+        <div className="flex flex-col md:grid md:grid-cols-3 gap-9 px-15 py-6">
+          {filteredProducts.length > 0 ? (
+            filteredProducts.map((product, idx) => (
+              <ProductCard key={idx} {...product} />
+            ))
+          ) : (
+            <div className="col-span-3 text-gray-400 text-xl">
+              No matching products found.
+            </div>
+          )}
+        </div>
+      </div>
+    </main>
   );
 };
 

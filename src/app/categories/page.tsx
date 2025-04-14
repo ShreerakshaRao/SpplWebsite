@@ -27,7 +27,8 @@ const page = () => {
   return (
     <>
       <main className="px-15 space-y-10">
-        <div className="flex py-15 items-center space-x-28">
+        {/* On mobile, stack the two text sections left aligned with vertical gap; on PC, display side-by-side */}
+        <div className="flex flex-col md:flex-row py-15 items-start md:space-x-28 space-y-6 md:space-y-0">
           <div className="text-base font-normal">
             Find the right medicines,
             <br /> supplements, and personal <br />
@@ -42,7 +43,8 @@ const page = () => {
 
         <div className="border-b-2 border-gray-400"></div>
 
-        <div className="flex flex-wrap gap-16">
+        {/* Grid layout: 2 columns on mobile, 5 columns on PC */}
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-16">
           {filteredCategories.length > 0 ? (
             filteredCategories.map((category) => (
               <Link
