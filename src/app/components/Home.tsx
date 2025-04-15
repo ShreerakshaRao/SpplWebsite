@@ -40,7 +40,6 @@ const Home = () => {
 
       <div className="font-serif font-light text-3xl px-15">New Launches</div>
 
-      {/* ✅ Responsive: horizontal scroll on desktop, stacked on mobile */}
       <div className="flex flex-col gap-y-10 lg:flex-row lg:space-x-8 px-15 lg:overflow-x-auto">
         {newLaunches.map((product, idx) => (
           <div key={idx} className="flex-shrink-0">
@@ -63,13 +62,19 @@ const Home = () => {
           "Gastric",
           "Calcium",
         ].map((cat) => (
-          <Image
+          <Link
             key={cat}
-            src={`/categories/${cat}.svg`}
-            alt={cat}
-            width={220}
-            height={220}
-          />
+            href={`/products?category=${encodeURIComponent(cat)}`}
+            className="cursor-pointer"
+          >
+            <Image
+              src={`/categories/${cat}.svg`}
+              alt={cat}
+              width={220}
+              height={220}
+              className="cursor-pointer"
+            />
+          </Link>
         ))}
       </div>
 

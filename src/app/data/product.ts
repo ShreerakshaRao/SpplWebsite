@@ -31,7 +31,7 @@ export const products = [
   {
     image: "/products/Sudofer-Syrup.svg",
     price: 108,
-    units: "Per Pcs",
+    units: "Per Bottle",
     name: "Sudofer Syrup",
     combination: "Carbonyl Iron + Zinc + Multivitamin Syrup",
     description: `
@@ -514,7 +514,7 @@ export const products = [
       image: "/products/Painsud.svg",
       price: 99,
       units: "Per Bottle",
-      name: "ssud Oil",
+      name: "Painosud Oil",
       combination: "Eucalyptus 0.5+Turpentine 1.0+camphor 6%+Methyl Salicylate 15%+rantanjot 2.5% +Nutmeg 1%+ Methol 1%+Clove Oil 1%",
       description: `
       <ul class="list-disc pl-5 space-y-2">

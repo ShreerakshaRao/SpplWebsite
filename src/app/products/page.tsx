@@ -29,6 +29,8 @@ const page = () => {
   const { query } = useSearch();
   const [isOpen, setIsOpen] = useState(false);
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
+  const [priceRange, setPriceRange] = useState([0, 500]);
+  const [isPriceOpen, setIsPriceOpen] = useState(false);
   const searchParams = useSearchParams();
   const categoryFromURL = searchParams.get("category");
 
@@ -71,15 +73,18 @@ const page = () => {
       .toLowerCase()
       .includes(query.toLowerCase());
 
+    const matchesPrice =
+      product.price >= priceRange[0] && product.price <= priceRange[1];
+
     if (selectedCategories.length === 0) {
-      return matchesQuery;
+      return matchesQuery && matchesPrice;
     }
 
     const selectedSlugs = selectedCategories.flatMap(
       (cat) => categorySlugMap[cat] || []
     );
 
-    return matchesQuery && selectedSlugs.includes(product.slug);
+    return matchesQuery && matchesPrice && selectedSlugs.includes(product.slug);
   });
 
   useEffect(() => {
@@ -123,7 +128,7 @@ const page = () => {
 
       <div className="border-b-2 border-gray-400"></div>
 
-      <div className="flex min-h-screen">
+      <div className="flex">
         <div className="border-r-2 border-gray-400 w-80 min-h-screen px-15 text-sm font-normal hidden md:block">
           <div
             className="pt-5 pb-3 border-b-2 border-gray-400 flex justify-between cursor-pointer"
@@ -150,15 +155,46 @@ const page = () => {
             </div>
           )}
 
-          <div className="pt-5 pb-3 border-b-2 border-gray-400 flex justify-between">
+
+          <div
+            className="pt-5 pb-3 border-b-2 border-gray-400 flex justify-between cursor-pointer"
+            onClick={() => setIsPriceOpen(!isPriceOpen)}
+          >
             <div>Price</div>
             <div>
-              <MdKeyboardArrowDown />
+              {isPriceOpen ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}
             </div>
           </div>
 
+          {isPriceOpen && (
+            <div className="mt-4">
+              <input
+                type="range"
+                min={0}
+                max={500}
+                value={priceRange[1]}
+                onChange={(e) => setPriceRange([0, Number(e.target.value)])}
+                className="w-full accent-[#008080] cursor-pointer" 
+              />
+              <div className="flex justify-between text-sm mt-1">
+                <span>₹{priceRange[0]}</span>
+                <span>₹{priceRange[1]}</span>
+              </div>
+            </div>
+          )}
+
           <div>
-            <button className="p-3 bg-primaryTeal text-white w-48 my-5">
+            {/* <button className="p-3 bg-primaryTeal text-white w-48 my-5">
+              Clear Filter
+            </button> */}
+
+            <button
+              className="p-3 bg-primaryTeal text-white w-48 my-5"
+              onClick={() => {
+                setSelectedCategories([]);
+                setPriceRange([0, 500]);
+              }}
+            >
               Clear Filter
             </button>
           </div>
