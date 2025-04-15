@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useSearch } from "../context/SearchContext";
 import Link from "next/link";
 
-const page = () => {
+const Page = () => {
   const { query } = useSearch();
 
   const categories = [
@@ -71,4 +71,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

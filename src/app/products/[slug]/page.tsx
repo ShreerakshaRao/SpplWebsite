@@ -1,15 +1,15 @@
+"use client"
+
 import { products } from "@/app/data/product";
 import Image from "next/image";
+import { useParams } from "next/navigation";
 import React from "react";
 
-interface Props {
-  params: {
-    slug: string;
-  };
-}
+const ProductDetails = () => {
 
-const ProductDetails = ({ params }: Props) => {
-  const product = products.find((p) => p.slug === params.slug);
+  const params = useParams();
+  const productId = params.slug;
+  const product = products.find((p) => p.slug === productId);
 
   if (!product) return <div className="m-10">Product not found.</div>;
 

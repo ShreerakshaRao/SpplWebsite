@@ -5,7 +5,16 @@ import Image from "next/image";
 import Link from "next/link";
 import { products } from "../data/product";
 
-const ProductCard = ({ image, price, units, slug, name }: any) => (
+interface ProductCardProps {
+  image: string;
+  price: number;
+  units: string;
+  slug: string;
+  name: string;
+}
+
+
+const ProductCard = ({ image, price, units, slug, name }: ProductCardProps) => (
   <Link href={`/products/${slug}`}>
     <div className="cursor-pointer mx-2.5">
       <Image

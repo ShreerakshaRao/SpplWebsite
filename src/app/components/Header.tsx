@@ -3,9 +3,9 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Search, Menu, X } from "lucide-react";
+import {Menu, X } from "lucide-react";
 
-import { useSearch } from "../context/SearchContext";
+// import { useSearch } from "../context/SearchContext";
 
 const navLinks = [
   { name: "Home", href: "/" },
@@ -15,12 +15,12 @@ const navLinks = [
 ];
 
 const Header = () => {
-  const { query, setQuery } = useSearch();
+  // const { query, setQuery } = useSearch();
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const handleSearch = (e: React.FormEvent) => {
-    e.preventDefault();
-  };
+  // const handleSearch = (e: React.FormEvent) => {
+  //   e.preventDefault();
+  // };
 
   return (
     <header className="w-full px-4 md:px-16 py-4 shadow-[0_4px_6px_-4px_rgba(0,0,0,0.5)] bg-white">
