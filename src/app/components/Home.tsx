@@ -13,7 +13,6 @@ interface ProductCardProps {
   name: string;
 }
 
-
 const ProductCard = ({ image, price, units, slug, name }: ProductCardProps) => (
   <Link href={`/products/${slug}`}>
     <div className="cursor-pointer mx-2.5">
@@ -49,7 +48,7 @@ const Home = () => {
 
       <div className="font-serif font-light text-3xl px-15">New Launches</div>
 
-      <div className="flex flex-col gap-y-10 lg:flex-row lg:space-x-8 px-15 lg:overflow-x-auto">
+      <div className="flex flex-col items-center gap-y-10 lg:flex-row lg:space-x-8 lg:overflow-x-auto lg:px-15">
         {newLaunches.map((product, idx) => (
           <div key={idx} className="flex-shrink-0">
             <ProductCard {...product} />
@@ -62,7 +61,7 @@ const Home = () => {
       </div>
 
       {/* ✅ Responsive: horizontal on PC, vertical on mobile */}
-      <div className="flex flex-col items-start gap-y-4 lg:flex-row lg:space-x-4 px-15">
+      <div className="grid grid-cols-2 place-items-center gap-y-4 gap-x-2 lg:flex lg:flex-row lg:space-x-2 lg:px-15">
         {[
           "Antibacterial",
           "Pain-Killers",
@@ -76,13 +75,15 @@ const Home = () => {
             href={`/products?category=${encodeURIComponent(cat)}`}
             className="cursor-pointer"
           >
-            <Image
-              src={`/categories/${cat}.svg`}
-              alt={cat}
-              width={220}
-              height={220}
-              className="cursor-pointer"
-            />
+            <div className="w-[140px] h-[140px] lg:w-[220px] lg:h-[220px]">
+              <Image
+                src={`/categories/${cat}.svg`}
+                alt={cat}
+                width={220}
+                height={220}
+                className="w-full h-full object-contain"
+              />
+            </div>
           </Link>
         ))}
       </div>
@@ -100,7 +101,7 @@ const Home = () => {
       </div>
 
       {/* ✅ Responsive: scroll on desktop, stack on mobile */}
-      <div className="flex flex-col gap-y-10 lg:flex-row lg:space-x-8 px-15 lg:overflow-x-auto">
+      <div className="flex flex-col gap-y-10 items-center lg:flex-row lg:space-x-8 lg:px-15 lg:overflow-x-auto">
         {deals.map((product, idx) => (
           <div key={idx} className="flex-shrink-0">
             <ProductCard {...product} />
