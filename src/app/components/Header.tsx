@@ -34,8 +34,8 @@ const Header = () => {
             height={40}
           />
 
-          <div className="text-2xl md:text-4xl font-normal whitespace-nowrap">
-            <span className="text-[#008080]">Sudhanand</span> Pharmacies
+          <div className="text-base md:text-4xl font-normal whitespace-nowrap text-[#008080]">
+            Sudhanand Pharmacies
           </div>
         </div>
 

@@ -91,7 +91,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="mt-20 p-6 sm:p-15 space-y-6 bg-[#003636] text-white">
+    <footer className="p-6 sm:p-15 space-y-6 bg-[#003636] text-white">
       <div className="flex flex-col lg:flex-row justify-between gap-10">
         {/* 📱 Responsive: flex-col on small, row on large */}
         <div className="space-y-7 w-full lg:w-1/2">

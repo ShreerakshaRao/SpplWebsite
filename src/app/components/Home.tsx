@@ -101,9 +101,9 @@ const Home = () => {
       </div>
 
       {/* ✅ Responsive: scroll on desktop, stack on mobile */}
-      <div className="flex flex-col gap-y-10 items-center lg:flex-row lg:space-x-8 lg:px-15 lg:overflow-x-auto">
+      <div className="flex flex-col gap-y-10 items-center mb-15 lg:flex-row lg:space-x-8 lg:px-15 lg:overflow-x-auto">
         {deals.map((product, idx) => (
-          <div key={idx} className="flex-shrink-0">
+          <div key={idx} className="flex-shrink-0"> 
             <ProductCard {...product} />
           </div>
         ))}

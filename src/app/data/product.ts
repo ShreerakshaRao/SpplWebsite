@@ -348,13 +348,13 @@ export const products = [
     slug: "12",
   },
 
-    {
-      image: "/products/Sudzee-500-Tablets.svg",
-      price: 110,
-      units: "Per Strip",
-      name: "Sudzee 500MG Tablets",
-      combination: "Azithromycin-500mg",
-      description: `
+  {
+    image: "/products/Sudzee-500-Tablets.svg",
+    price: 110,
+    units: "Per Strip",
+    name: "Sudzee 500MG Tablets",
+    combination: "Azithromycin-500mg",
+    description: `
       <ul class="list-disc pl-5 space-y-2">
         <li>Sudzee has broad-spectrum antibacterial activity.</li>
         <li>Works by inhibiting protein synthesis through binding to bacterial ribosomes.</li>
@@ -378,17 +378,17 @@ export const products = [
         </li>
       </ul>
     `,
-    
-  
-      slug: "13",
-    },
-    {
-      image: "/products/Sudorox-DT-Tablets.svg",
-      price: 82,
-      units: "Per Strip",
-      name: "Sudorox-DT Tablets",
-      combination: "Piroxicam 20mg",
-      description: `
+
+
+    slug: "13",
+  },
+  {
+    image: "/products/Sudorox-DT-Tablets.svg",
+    price: 82,
+    units: "Per Strip",
+    name: "Sudorox-DT Tablets",
+    combination: "Piroxicam 20mg",
+    description: `
   <ul class="list-disc pl-5 space-y-2">
     <li>Piroxicam is a COX-2 inhibitor.</li>
     <li>Inhibits cyclooxygenase (COX) enzymes and exerts anti-inflammatory activity.</li>
@@ -408,15 +408,15 @@ export const products = [
     </li>
   </ul>
 `,
-      slug: "14",
-    },
-    {
-      image: "/products/Sudofenac-SP-Tablets.svg",
-      price: 105,
-      units: "Per Strip",
-      name: "Sudofenac-SP Tablets",
-      combination: " Aceclofenac 100mg + Paracetamol 325mg + Serratiopeptidase 10mg",
-      description: `
+    slug: "14",
+  },
+  {
+    image: "/products/Sudofenac-SP-Tablets.svg",
+    price: 105,
+    units: "Per Strip",
+    name: "Sudofenac-SP Tablets",
+    combination: " Aceclofenac 100mg + Paracetamol 325mg + Serratiopeptidase 10mg",
+    description: `
       The combination of Aceclofenac, Paracetamol, and Serratiopeptidase provides:
   <ul class="list-disc pl-5 space-y-2">   
    <li>Enhanced pain relief.</li>
@@ -438,17 +438,17 @@ export const products = [
   </ul>
 `,
 
-      slug: "15",
-    
-    },
+    slug: "15",
 
-    {
-      image: "/products/Tramasud.svg",
-      price: 26,
-      units: "Per Injection",
-      name: "Tramasud Injection 2ML",
-      combination: "Tramadol 50mg",
-      description: `
+  },
+
+  {
+    image: "/products/Tramasud.svg",
+    price: 26,
+    units: "Per Injection",
+    name: "Tramasud Injection 2ML",
+    combination: "Tramadol 50mg",
+    description: `
   <ul class="list-disc pl-5 space-y-2">
     <li>Used for the treatment of pain and possesses potent analgesic activity.</li>
     <li>Effective in acute and chronic pain management.</li>
@@ -460,16 +460,16 @@ export const products = [
     </li>
   </ul>
 `,
-      slug: "16",
-    
-    },
-    {
-      image: "/products/Sudoxycalv-625-Tablets.svg",
-      price: 204,
-      units: "Per Strip",
-      name: "Sudoxycalv 625MG Tablets",
-      combination: "Amoxicillin 500mg + Clavulanate Potassium 125mg",
-      description: `
+    slug: "16",
+
+  },
+  {
+    image: "/products/Sudoxycalv-625-Tablets.svg",
+    price: 204,
+    units: "Per Strip",
+    name: "Sudoxycalv 625MG Tablets",
+    combination: "Amoxicillin 500mg + Clavulanate Potassium 125mg",
+    description: `
   <ul class="list-disc pl-5 space-y-2">
     <li>Offers effective treatment against a wide range of infections.</li>
     <li>Broad-spectrum antibacterial activity with a well-established safety profile.</li>
@@ -489,16 +489,16 @@ export const products = [
   </ul>
 `,
 
-      slug: "17",
-    
-    },
-    {
-      image: "/products/Sudocal-Suspension.svg",
-      price: 110,
-      units: "Per Bottle",
-      name: "Sudocal Syrup",
-      combination: "Elementan Calcium 250mg + Vitamin D3 I.P. 125IU",
-      description: `
+    slug: "17",
+
+  },
+  {
+    image: "/products/Sudocal-Suspension.svg",
+    price: 110,
+    units: "Per Bottle",
+    name: "Sudocal Syrup",
+    combination: "Elementan Calcium 250mg + Vitamin D3 I.P. 125IU",
+    description: `
   <ul class="list-disc pl-5 space-y-2">
     <li>Calcium Carbonate: Maintains strong bones and teeth.</li>
     <li>Supports muscle and nerve function.</li>
@@ -506,17 +506,17 @@ export const products = [
     <li>Helps maintain bone density and strength.</li>
   </ul>
 `,
-      slug: "18",
-    
-    },
+    slug: "18",
 
-    {
-      image: "/products/Painsud.svg",
-      price: 99,
-      units: "Per Bottle",
-      name: "Painosud Oil",
-      combination: "Eucalyptus 0.5+Turpentine 1.0+camphor 6%+Methyl Salicylate 15%+rantanjot 2.5% +Nutmeg 1%+ Methol 1%+Clove Oil 1%",
-      description: `
+  },
+
+  {
+    image: "/products/Painsud.svg",
+    price: 99,
+    units: "Per Bottle",
+    name: "Painosud Oil",
+    combination: "Eucalyptus 0.5+Turpentine 1.0+camphor 6%+Methyl Salicylate 15%+rantanjot 2.5% +Nutmeg 1%+ Methol 1%+Clove Oil 1%",
+    description: `
       <ul class="list-disc pl-5 space-y-2">
         <li>The phytochemicals help provide fast and effective pain relief.</li>
         <li>Reduces inflammation and swelling, and improves joint mobility and flexibility.</li>
@@ -524,17 +524,17 @@ export const products = [
         <li>Easy to apply.</li>
       </ul>
     `,
-    
-      slug: "19",
-    
-    },
-    {
-      image: "/products/Panosud-40-Tablets.svg",
-      price: 40,
-      units: "Per Strip",
-      name: "Panosud 40 Tablets",
-      combination: "Pantoprazole 40mg",
-      description: `
+
+    slug: "19",
+
+  },
+  {
+    image: "/products/Panosud-40-Tablets.svg",
+    price: 40,
+    units: "Per Strip",
+    name: "Panosud 40 Tablets",
+    combination: "Pantoprazole 40mg",
+    description: `
   <ul class="list-disc pl-5 space-y-2">
     <li>An effective proton pump inhibitor (PPI) that works against gastric acid hypersecretion.</li>
     <li>Effectively prevents stomach ulcers caused by NSAIDs and H. pylori infection.</li>
@@ -543,17 +543,17 @@ export const products = [
   </ul>
 `,
 
-    
-      slug: "20",
-    
-    },
-    {
-      image: "/products/Panosud-DSR-Capsules.svg",
-      price: 90,
-      units: "Per Strip",
-      name: "Panosud DSR Tablets",
-      combination: "Pantoprazole 40mg + Domperidone 30mg",
-      description: `
+
+    slug: "20",
+
+  },
+  {
+    image: "/products/Panosud-DSR-Capsules.svg",
+    price: 90,
+    units: "Per Strip",
+    name: "Panosud DSR Tablets",
+    combination: "Pantoprazole 40mg + Domperidone 30mg",
+    description: `
       <ul class="list-disc pl-5 space-y-2">
         Pantoprazole: 
         <ul class="list-disc pl-5 mt-2 space-y-1">
@@ -569,18 +569,18 @@ export const products = [
         <li>Blocks the action of the vomiting center (Chemoreceptor Trigger Zone - CTZ) in the brain, relieving nausea and vomiting.</li>
       </ul>
     `,
-    
-slug: "21",
 
-},
+    slug: "21",
 
-    {
-      image: "/products/Parsud-650-Tablets.svg",
-      price: 20,
-      units: "Per Strip",
-      name: "Parsud 650 Tablets",
-      combination: "Paracetamol 650mg",
-      description: `
+  },
+
+  {
+    image: "/products/Parsud-650-Tablets.svg",
+    price: 20,
+    units: "Per Strip",
+    name: "Parsud 650 Tablets",
+    combination: "Paracetamol 650mg",
+    description: `
   <ul class="list-disc pl-5 space-y-2">
     <li>Acts on the hypothalamus to produce antipyresis and analgesia.</li>
     <li>Provides relief from headache, toothache, backache, musculoskeletal pain, and nerve pain.</li>
@@ -589,17 +589,17 @@ slug: "21",
   </ul>
 `,
 
-slug: "22",
+    slug: "22",
 
-},
+  },
 
-    {
-      image: "/products/Sudocal-500-Tablets.svg",
-      price: 100,
-      units: "Per Strip",
-      name: "Sudocal 500 Tablets",
-      combination: "Calcium Cidrate 500mg",
-      description: `
+  {
+    image: "/products/Sudocal-500-Tablets.svg",
+    price: 100,
+    units: "Per Strip",
+    name: "Sudocal 500 Tablets",
+    combination: "Calcium Cidrate 500mg",
+    description: `
       <ul class="list-disc pl-5 space-y-2">
         <li>Facilitates calcium retention and bone accrual in children and adolescents.</li>
         <li>Promotes the consolidation and maintenance of bone mass in adults.</li>
@@ -608,18 +608,18 @@ slug: "22",
         <li>Vitamin K2-7 mg improves bone formation, rapidly reduces fracture risk, and enhances the efficacy of calcium and Vitamin D3.</li>
       </ul>
     `,
-    
 
-slug: "23",
 
-},
-    {
-      image: "/products/Sudoxicab-90-Tablets.svg",
-      price: 100,
-      units: "Per Strip",
-      name: "Sudoxicab 90 Tablets",
-      combination: "Etoricoxib",
-      description: `
+    slug: "23",
+
+  },
+  {
+    image: "/products/Sudoxicab-90-Tablets.svg",
+    price: 100,
+    units: "Per Strip",
+    name: "Sudoxicab 90 Tablets",
+    combination: "Etoricoxib",
+    description: `
   <ul class="list-disc pl-5 space-y-2">
     <li>A highly selective COX-2 inhibitor.</li>
     <li>Does not affect platelet function or damage the gastric mucosa.</li>
@@ -631,34 +631,34 @@ slug: "23",
   </ul>
 `,
 
-slug: "24",
+    slug: "24",
 
-},
-    {
-      image: "/products/Sudonem-Injection.svg",
-      price: 13.35,
-      units: "Per Bottle",
-      name: "Sudonem Injection",
-      combination: "Ondansetron Hydrochloride Dihydride",
-      description: `
+  },
+  {
+    image: "/products/Sudonem-Injection.svg",
+    price: 13.35,
+    units: "Per Bottle",
+    name: "Sudonem Injection",
+    combination: "Ondansetron Hydrochloride Dihydride",
+    description: `
       <ul class="list-disc pl-5 space-y-2">
         <li>A serotonin 5-HT₃ receptor antagonist that effectively prevents nausea and vomiting.</li>
         <li>Works well in managing chemotherapy- and radiation therapy–induced vomiting.</li>
         <li>Treats nausea and vomiting associated with GERD.</li>
       </ul>
     `,
-    
-slug: "25",
 
-},
+    slug: "25",
 
-    {
-      image: "/products/Panosud-Injection.svg",
-      price: 55,
-      units: "Per Injection",
-      name: "Panosud Injection",
-      combination: "Pantoprazole 40mg",
-      description: `
+  },
+
+  {
+    image: "/products/Panosud-Injection.svg",
+    price: 55,
+    units: "Per Injection",
+    name: "Panosud Injection",
+    combination: "Pantoprazole 40mg",
+    description: `
       <ul class="list-disc pl-5 space-y-2">
         <li>An effective proton pump inhibitor (PPI) that works against gastric acid hypersecretion.</li>
         <li>Effectively prevents stomach ulcers caused by NSAIDs and H. pylori infection.</li>
@@ -666,17 +666,17 @@ slug: "25",
         <li>A well-tolerated PPI with a low incidence of side effects.</li>
       </ul>
     `,
-    
-slug: "26",
 
-},
-    {
-      image: "/products/Sudofast-Gel.svg",
-      price: 90,
-      units: "Per Gel",
-      name:"Sudofast Gel",
-      combination: "Linseed oil + Diclofenac + Methyl Salicylate + Menthol",
-      description: `
+    slug: "26",
+
+  },
+  {
+    image: "/products/Sudofast-Gel.svg",
+    price: 90,
+    units: "Per Gel",
+    name: "Sudofast Gel",
+    combination: "Linseed oil + Diclofenac + Methyl Salicylate + Menthol",
+    description: `
       <ul class="list-disc pl-5 space-y-2">
         <li>Diclofenac: Inhibits the COX enzyme and sodium channels to mediate local analgesic effects.</li>
         <li>Methyl Salicylate: Acts as an analgesic by increasing localized blood flow and tissue temperature through vasodilation.</li>
@@ -694,8 +694,88 @@ slug: "26",
         </li>
       </ul>
     `,
-    
+
     slug: "27",
 
-},
+  },
+
+  {
+    image: "/products/Sudofast-Injection.svg",
+    price: 5,
+    units: "Per Injection",
+    name: "Sudofast Injection",
+    combination: "Diclofenac Sodium 25mg/ml",
+    description: `
+  <ul class="list-disc pl-5 space-y-2">
+    <li>Muscle strains and slipped disc</li>
+    <li>Frozen shoulder</li>
+    <li>Rheumatoid arthritis</li>
+    <li>Post-operative pain</li>
+    <li>Inflammatory conditions</li>
+    <li>Sciatica</li>
+    <li>Myalgia</li>
+    <li>Generalized pain</li>
+    <li>Primary dysmenorrhoea</li>
+    <li>Possesses analgesic, antipyretic, and anti-inflammatory properties</li>
+    <li>Inhibits COX-1 and COX-2 enzymes</li>
+    <li>Provides rapid relief from muscle stiffness and pain</li>
+    <li>Promotes fast recovery from muscle and tendon injuries</li>
+  </ul>
+`,
+
+    slug: "28",
+
+  },
+
+  {
+    image: "/products/Glimsud-M2-Tablets.svg",
+    price: 65,
+    units: "Per Strip",
+    name: "Glimisud M2 Tablets",
+    combination: "Glimepiride + Metformin HCI 2mg/500mg",
+    description: `
+  <ul class="list-disc pl-5 space-y-2">
+    <li>Glimepiride belongs to the sulfonylurea class of medications, which stimulate the pancreas to release more insulin.</li>
+    <li>Metformin works primarily by decreasing glucose production in the liver (hepatic gluconeogenesis), reducing gastrointestinal absorption, and increasing insulin sensitivity in target cells.</li>
+    <li>The combination provides a synergistic effect in lowering blood glucose levels.</li>
+    <li>This dual action helps achieve better overall glycaemic control than either drug alone.</li>
+  </ul>
+`,
+
+    slug: "29",
+
+  },
+
+  {
+    image: "/products/Sudofast-D-Tablets.svg",
+    price: 90,
+    units: "Per Strip",
+    name: "Sudofast D Tablets",
+    combination: " Diclofenac potassium 50mg + Serratiopeptidase 10mg",
+    description: `
+  <ul class="list-disc pl-5 space-y-2">
+    <li>Provides fast absorption and rapid onset of analgesia.</li>
+    <li>Effective in treating a variety of acute painful conditions.</li>
+    <li>Acts quickly on localized inflammation.</li>
+    <li>Serratiopeptidase breaks down abnormal proteins at the site of inflammation and promotes healing.</li>
+  </ul>
+`,
+
+    slug: "30",
+
+  },
+
+  {
+    image: "/products/Parasud-IV-Infusion.svg",
+    price: 90,
+    units: "Per Bottle",
+    name: "Parasud IV Infusion",
+    combination: " Data Not Found",
+    description: `
+  Data Not Found
+`,
+
+    slug: "31",
+
+  },
 ];

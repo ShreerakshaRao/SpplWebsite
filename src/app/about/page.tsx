@@ -4,8 +4,8 @@ import React from "react";
 import Image from "next/image";
 
 const page = () => {
-  const teams = ["Img1", "Img2", "Img3", "Img4", "Img5", "Img6"];
-  const founders = ["Img7", "Img8"];
+  const teams = ["Members1", "Members2", "Members3", "Members4", "Members5", "Members6"];
+  const founders = ["Founder1", "Founder2"];
 
   return (
     <>
@@ -68,7 +68,7 @@ const page = () => {
         </div>
 
         {/* Founders Section */}
-        <div className="text-center py-20">
+        <div className="text-center py-10">
           <h1 className="text-4xl font-normal font-serif mb-10">
             Our Founders
           </h1>
@@ -89,7 +89,7 @@ const page = () => {
 
         {/* Team Section */}
         <div className="text-center py-20">
-          <h1 className="text-4xl font-normal font-serif mb-10">Our Team</h1>
+          <h1 className="text-4xl font-normal font-serif mb-10">Our Board Members</h1>
           <div className="flex justify-center">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
               {teams.map((team) => (

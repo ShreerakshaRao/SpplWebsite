@@ -204,7 +204,7 @@ const ProductClient = () => {
               </button>
             </div>
   
-            <div className="space-y-6 mt-7 hidden md:block">
+            {/* <div className="space-y-6 mt-7 hidden md:block">
               <Image
                 src="/Image2.svg"
                 alt="Company Logo"
@@ -223,10 +223,10 @@ const ProductClient = () => {
                 width={350}
                 height={350}
               />
-            </div>
+            </div> */}
           </div>
   
-          <div className="flex flex-col md:grid md:grid-cols-3 gap-9 px-15 py-6">
+          <div className="flex flex-col md:grid md:grid-cols-3 gap-9 px-15 py-6 mb-15">
             {filteredProducts.length > 0 ? (
               filteredProducts.map((product, idx) => (
                 <ProductCard key={idx} {...product} />

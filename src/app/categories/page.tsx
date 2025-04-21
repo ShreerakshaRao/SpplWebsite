@@ -44,7 +44,7 @@ const Page = () => {
         <div className="border-b-2 border-gray-400"></div>
 
         {/* Grid layout: 2 columns on mobile, 5 columns on PC */}
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-16">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-16 mb-15">
           {filteredCategories.length > 0 ? (
             filteredCategories.map((category) => (
               <Link
