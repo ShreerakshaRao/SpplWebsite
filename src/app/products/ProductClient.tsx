@@ -224,25 +224,21 @@ const ProductClient = () => {
             </div> */}
         </div>
 
-        <div className="flex flex-col items-center md:grid md:grid-cols-3 gap-9 md:px-15 py-6 mb-15">
-  {filteredProducts.length > 0 ? (
-    filteredProducts.map((product, idx) => (
-      <div
-        key={idx}
-        className="w-full flex justify-center md:block"
-      >
-        <div className="w-[70%] md:w-full">
-          <ProductCard {...product} />
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-9 px-4 md:px-15 py-6 mb-15">
+          {filteredProducts.length > 0 ? (
+            filteredProducts.map((product, idx) => (
+              <div key={idx} className="flex justify-center">
+                <div className="w-[90%] sm:w-[80%] md:w-full">
+                  <ProductCard {...product} />
+                </div>
+              </div>
+            ))
+          ) : (
+            <div className="col-span-3 text-gray-400 text-xl text-center">
+              No matching products found.
+            </div>
+          )}
         </div>
-      </div>
-    ))
-  ) : (
-    <div className="col-span-3 text-gray-400 text-xl text-center">
-      No matching products found.
-    </div>
-  )}
-</div>
-
       </div>
     </main>
   );
