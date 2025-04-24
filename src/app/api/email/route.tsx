@@ -34,7 +34,7 @@ export async function POST(req: NextRequest) {
       from: process.env.EMAIL_USER,
       to: email, // User gets an auto-reply
       subject: 'Thank you for contacting us!',
-      text: `Dear ${name},\n\nThank you for reaching out. We will get back to you shortly.\n\nBest regards,\nThe Support Team,\nSudhanand Pharmacy Private Limited`,
+      text: `Dear ${name},\n\nThank you for reaching out. We will get back to you shortly.\n\nBest regards,\nThe Support Team,\nSudhanand Groups`,
     });
     return NextResponse.json({ message: 'Emails sent successfully' });
   } catch (error) {

@@ -2,25 +2,35 @@
 
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
+import { useIsDesktop } from "../hooks/useIsDesktop";
 
-const page = () => {
-  const teams = ["Members1", "Members2", "Members3", "Members4", "Members5", "Members6"];
+const Page = () => {
+
+  const isDesktop = useIsDesktop();
+
+  const teams = [
+    "Members1",
+    "Members2",
+    "Members3",
+    "Members4",
+    "Members5",
+    "Members6",
+  ];
   const founders = ["Founder1", "Founder2"];
 
   return (
     <>
       <main className="space-y-3">
-
-
         <div className="flex flex-col md:flex-row p-15 items-start md:space-x-28 space-y-6 md:space-y-0">
           <div className="text-base font-normal">
-          Browse through our extensive
+            Browse through our extensive
             <br /> collection of medicines, <br />
             wellness products, and <br />
             healthcare essentials
           </div>
           <div className="text-4xl font-normal font-serif">
-          About Sudhanand
+            About Sudhanand
             <br />
             Pharmacies Pvt. Ltd.
           </div>
@@ -28,8 +38,7 @@ const page = () => {
 
         <div className="border-b-2 border-gray-400"></div>
 
-        {/* Company Description */}
-        <div className="m-20 px-5 md:px-55 space-y-5 text-xl font-medium leading-normal md:leading-relaxed text_Gray">
+        <div className="px-5 m-5 md:px-55 md:m-20 space-y-5 text-xl font-medium leading-normal md:leading-relaxed text_Gray">
           <p>
             This company, Sudhanand Pharmacies Pvt. Ltd., was established by the
             Sudhanand Group in early 2023 to consolidate all the pharmacies
@@ -69,27 +78,44 @@ const page = () => {
 
         {/* Founders Section */}
         <div className="text-center py-10">
-          <h1 className="text-4xl font-normal font-serif mb-10">
+          <h1 className="md:text-4xl text-2xl font-normal font-serif mb-10">
             Our Founders
           </h1>
           <div className="flex justify-center">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-              {founders.map((founder) => (
+             {founders.map((founder, index) => {
+              const image = (
                 <Image
                   key={founder}
                   src={`/team/${founder}.svg`}
                   alt={founder}
                   width={300}
                   height={300}
+                  className="transition-transform hover:scale-105"
                 />
-              ))}
+              );
+
+              return isDesktop ? (
+                <Link
+                  key={founder}
+                  href={`/founders#founder${index + 1}`}
+                  className="transition-transform hover:scale-105"
+                >
+                  {image}
+                </Link>
+              ) : (
+                <div key={founder}>{image}</div>
+              );
+            })}
             </div>
           </div>
         </div>
 
         {/* Team Section */}
         <div className="text-center py-20">
-          <h1 className="text-4xl font-normal font-serif mb-10">Our Board Members</h1>
+          <h1 className="md:text-4xl text-2xl font-normal font-serif mb-10">
+            Our Board Members
+          </h1>
           <div className="flex justify-center">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
               {teams.map((team) => (
@@ -109,4 +135,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
