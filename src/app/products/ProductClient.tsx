@@ -201,27 +201,6 @@ const ProductClient = () => {
               Clear Filter
             </button>
           </div>
-
-          {/* <div className="space-y-6 mt-7 hidden md:block">
-              <Image
-                src="/Image2.svg"
-                alt="Company Logo"
-                width={350}
-                height={350}
-              />
-              <Image
-                src="/Image3.svg"
-                alt="Company Logo"
-                width={350}
-                height={350}
-              />
-              <Image
-                src="/Image4.svg"
-                alt="Company Logo"
-                width={350}
-                height={350}
-              />
-            </div> */}
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-9 md:px-15 py-6 mb-15 items-center">

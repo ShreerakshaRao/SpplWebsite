@@ -88,11 +88,20 @@ const Home = () => {
         ))}
       </div>
 
-      <div className="w-full h-auto bg-gradient-to-r from-[#9796F0] to-[#FBC7D4] px-6 py-10 lg:p-15 flex flex-col justify-center">
+      <div className="w-full h-auto bg-gradient-to-r from-[#4EBDBD] to-[#CCE9E9] px-6 py-10 lg:p-15 flex flex-col justify-center">
         <div className="font-light font-serif text-2xl leading-snug text-center lg:text-left lg:text-4xl lg:leading-[3rem]">
-          Unlock exclusive discounts on large quantity purchases with{" "}
+          Unlock exclusive discounts on large quantity purchases with
           <br className="hidden lg:block" />
-          our personalized bulk order pricing solutions.
+          our personalized bulk order pricing solutions – {" "}
+          <Link
+            href="/contact"
+            className="underline"
+          >
+            CONTACT US 
+           
+          </Link>
+          {" "}
+          to learn more
         </div>
       </div>
 
@@ -103,7 +112,7 @@ const Home = () => {
       {/* ✅ Responsive: scroll on desktop, stack on mobile */}
       <div className="flex flex-col gap-y-10 items-center mb-15 lg:flex-row lg:space-x-8 lg:px-15 lg:overflow-x-auto">
         {deals.map((product, idx) => (
-          <div key={idx} className="flex-shrink-0"> 
+          <div key={idx} className="flex-shrink-0">
             <ProductCard {...product} />
           </div>
         ))}

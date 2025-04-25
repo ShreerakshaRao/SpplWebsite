@@ -12,6 +12,7 @@ const navLinks = [
   { name: "Categories", href: "/categories" },
   { name: "Full Catalog", href: "/products" },
   { name: "About Us", href: "/about" },
+  { name: "Contact Us", href: "/contact" },
 ];
 
 const Header = () => {
@@ -25,7 +26,7 @@ const Header = () => {
   return (
     <header className="w-full px-4 md:px-16 py-4 shadow-[0_4px_6px_-4px_rgba(0,0,0,0.5)] bg-white">
       <div className="flex justify-between items-center">
-        {/* Logo and Name Section */}
+
         <div className="flex items-center space-x-4 md:space-x-14 flex-shrink-0">
           <Image
             src="/SudhanandLogo1.svg"
@@ -71,10 +72,6 @@ const Header = () => {
             </Link>
           ))}
 
-          <div className="flex items-center space-x-2">
-            <Image src="/call.svg" alt="Call Icon" width={20} height={20} />
-            <span>9876543210</span>
-          </div>
         </div>
 
         {/* Mobile menu toggle */}
@@ -98,10 +95,6 @@ const Header = () => {
             </Link>
           ))}
 
-          <div className="flex items-center space-x-2">
-            <Image src="/call.svg" alt="Call Icon" width={20} height={20} />
-            <span>9876543210</span>
-          </div>
         </div>
       )}
     </header>
