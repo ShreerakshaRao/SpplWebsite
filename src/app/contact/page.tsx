@@ -17,7 +17,9 @@ const Page = () => {
     message: "",
   });
   const [loading, setLoading] = useState(false);
-  const [responseMessage, setResponseMessage] = useState("");
+  const [, setResponseMessage] = useState("");
+
+//   const [responseMessage, setResponseMessage] = useState("");
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -59,7 +61,7 @@ const Page = () => {
       <main className="space-y-3">
         <div className="flex flex-col md:flex-row p-15 items-center md:items-start justify-center md:justify-start md:space-x-28 space-y-6 md:space-y-0 text-center md:text-left">
           <div className="font-normal text-sm sm:text-base">
-            We're Here to Help – Reach Out
+            We are Here to Help – Reach Out
             <br /> for Expert Support and <br />
             Personalized Solutions
           </div>
@@ -170,7 +172,7 @@ const Page = () => {
             <div className="mt-10">
               <div className="font-medium text-xl">Mail Us</div>
               <div className="font-normal text-sm">
-                Mail us your query - we'll reply within 48 hours
+                Mail us your query - we will reply within 48 hours
               </div>
               <div className="flex space-x-2 font-medium text-base items-center pt-3">
                 <IoMail /> <span className="underline">info@tiameds.ai</span>
