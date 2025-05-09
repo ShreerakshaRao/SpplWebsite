@@ -186,7 +186,7 @@ const Page = () => {
               </div>
               <div className="flex space-x-2 font-medium text-base items-center pt-3">
                 <IoIosCall />
-                <span className="underline">+91 821 428 0152</span>
+                <span className="underline">+91 968 681 2082</span>
               </div>
             </div>
 

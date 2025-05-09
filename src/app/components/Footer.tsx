@@ -92,7 +92,7 @@ const Footer = () => {
 
           <div className="flex items-center space-x-3">
             <IoIosCall />
-            <div className="text-sm font-normal">+91 8214280152</div>
+            <div className="text-sm font-normal">+91 968 681 2082</div>
           </div>
 
           <div className="flex items-center space-x-3">
