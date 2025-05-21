@@ -9,16 +9,16 @@ const Page = () => {
   const { query } = useSearch();
 
   const categories = [
-    "Antibacterial",
-    "Pain-Killers",
-    "Ortho-Oil",
-    "Paracetamol",
-    "Gastric",
-    "Nausea-Vomiting",
-    "Calcium",
-    "Iron",
-    "Enzyme",
-    "Diabeties",
+    "Antibiotic",
+    "Analgesic",
+    "Musculoskeletal Oil",
+    "Antipyretic",
+    "Antacids",
+    "Antiemetic",
+    "Calcium Supplement",
+    "Iron Replenishment",
+    "Biocatalyst",
+    "Antidiabetic",
   ];
 
   const filteredCategories = categories.filter((category) =>
@@ -52,12 +52,15 @@ const Page = () => {
                 href={`/products?category=${encodeURIComponent(category)}`}
               >
                 <Image
-                  src={`/categories/${category}.svg`}
+                  src={`/categories/${category}.png`}
                   alt={category}
                   width={220}
                   height={220}
-                  className="cursor-pointer"
+                  className="w-full cursor-pointer object-contain"
                 />
+                <div className="bg-[#00363666] h-10 w-full text-white flex items-center justify-center text-lg text-center">
+                  {category}
+                </div>
               </Link>
             ))
           ) : (

@@ -18,6 +18,8 @@ const ProductDetails = () => {
       {/* Product Info Section */}
       <div className="flex-1">
         <div className="text-4xl font-normal font-serif">{product.name}</div>
+        <div className="text-[#605E5E] text-xl font-normal mt-3">{product.caption}</div>
+
         <div className="flex space-x-3 items-center mt-5">
           <div className="text-2xl font-bold">₹{product.price}</div>
           <div className="text-base font-normal">{product.units}</div>

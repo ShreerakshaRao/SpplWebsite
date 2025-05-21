@@ -19,7 +19,7 @@ const Page = () => {
   const [loading, setLoading] = useState(false);
   const [, setResponseMessage] = useState("");
 
-//   const [responseMessage, setResponseMessage] = useState("");
+  //   const [responseMessage, setResponseMessage] = useState("");
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -175,7 +175,7 @@ const Page = () => {
                 Mail us your query - we will reply within 48 hours
               </div>
               <div className="flex space-x-2 font-medium text-base items-center pt-3">
-                <IoMail /> <span className="underline">info@tiameds.ai</span>
+                <IoMail /> <span>info@sppl.com</span>
               </div>
             </div>
 
@@ -186,7 +186,7 @@ const Page = () => {
               </div>
               <div className="flex space-x-2 font-medium text-base items-center pt-3">
                 <IoIosCall />
-                <span className="underline">+91 968 681 2082</span>
+                <span>+91 968 681 2082</span>
               </div>
             </div>
 
@@ -197,7 +197,7 @@ const Page = () => {
               </div>
               <div className="flex space-x-2 font-medium text-base items-center pt-3">
                 <IoLocationSharp />
-                <span className="underline">
+                <span>
                   Sy. No. 59, 2nd Floor, Dakshina Murthy Towers,
                   <br /> Devanooru, Rajeevnagara 2nd Stage,
                   <br /> Udayagiri, Mysore 570019.
@@ -207,6 +207,11 @@ const Page = () => {
 
             <div className="absolute bottom-0 right-0 w-40 h-40 rounded-tl-full bg-gradient-to-br from-[#E8F6F6] to-[#004C4C]"></div>
           </div>
+        </div>
+
+        <div className="lg:m-25">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d352744.0387604467!2d76.56882720776927!3d12.362299987569557!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baf715882327299%3A0x32271a3be38a09eb!2sSudhanand%20Pharmacies%20Pvt.%20Ltd.!5e0!3m2!1sen!2sin!4v1747812093324!5m2!1sen!2sin"width="1300" height="400" className="border-none"  loading="lazy"></iframe>
+          {/* <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1093750.0075613216!2d77.24752632509997!3d10.897934123093172!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baf715882327299%3A0x32271a3be38a09eb!2sSudhanand%20Pharmacies%20Pvt.%20Ltd.!5e0!3m2!1sen!2sin!4v1747741850450!5m2!1sen!2sin" width="1300" height="400" className="border-none"  loading="lazy"></iframe> */}
         </div>
       </main>
     </>

@@ -1,9 +1,10 @@
 export const products = [
   {
     image: "/products/Sudofer-XT-Tablet.svg",
-    price: 105.0,
+    price: 105.00,
     units: "Per Strip",
     name: "Sudofer-XT Tablet",
+    caption: "Strip Of 10 Tablets",
     combination: "Ferrous Ascorbate 100mg + Folic acid 125mg",
     description: `
     <ul style="list-style-type: disc; padding-left: 1.5rem;">
@@ -33,6 +34,7 @@ export const products = [
     price: 108,
     units: "Per Bottle",
     name: "Sudofer Syrup",
+    caption: "Pack Of 1 Bottle",
     combination: "Carbonyl Iron + Zinc + Multivitamin Syrup",
     description: `
     <ul class="list-disc pl-5 space-y-2">
@@ -55,8 +57,9 @@ export const products = [
   {
     image: "/products/Sudzyme-Syrup.svg",
     price: 105,
-    units: "Per Bottel",
+    units: "Per Bottle",
     name: "Sudzyme Syrup",
+    caption: "Pack Of 1 Bottle",
     combination: "Digestive 200ml Syrup",
     description: `
       <ul class="list-disc pl-5 space-y-2">
@@ -79,6 +82,7 @@ export const products = [
     price: 220,
     units: "Per Injection",
     name: "Sudofer Sucrose Injection IV",
+    caption: "Pack Of 1 Injection",
     combination: " Iron Sucrose 5ml",
     description: `
     <ul class="list-disc pl-5 space-y-2">
@@ -107,6 +111,7 @@ export const products = [
     price: 90,
     units: "Per Strip",
     name: "Tramasud P Tablet",
+    caption: "Strip Of 10 Tablets",
     combination: "Tramadol 50mg + Paracetamol 325mg",
     description: `
   <ul class="list-disc pl-5 space-y-2">
@@ -141,6 +146,7 @@ export const products = [
     price: 40,
     units: "Per Strip",
     name: "Glimisud M1 Tablets",
+    caption: "Strip Of 10 Tablets",
     combination: " Glimepiride +Metformin HCI 1mg/500mg",
     description: `
       <ul class="list-disc pl-5 space-y-2">
@@ -167,6 +173,7 @@ export const products = [
     price: 65,
     units: "Per Strip",
     name: "Glimisud MP2 Tablets",
+    caption: "Strip Of 10 Tablets",
     combination: " Glimepiride 2mg +Metformin HCI 500mg + Pioglitazone 15mg",
     description: `
   <ul class="list-disc pl-5 space-y-2">
@@ -189,6 +196,7 @@ export const products = [
     price: 82.5,
     units: "Per Strip",
     name: "Sudobose 0.3MG Tablets",
+    caption: "Strip Of 10 Tablets",
     combination: " Voglibose 0.3mg I.P",
     description: `
   <ul class="list-disc pl-5 space-y-2">
@@ -219,6 +227,7 @@ export const products = [
     price: 185,
     units: "Per Injection",
     name: "Sudsulb 1.5MG Injection",
+    caption: "Pack Of 1 Injection",
     combination: " Ceftriaxone 1gm + Sulbactam 500mg",
     description: `
   <ul class="list-disc pl-5 space-y-2">
@@ -254,6 +263,7 @@ export const products = [
     price: 90,
     units: "Per Strip",
     name: "Cefisud 100MG Tablets",
+    caption: "Strip Of 10 Tablets",
     combination: "Cefixime-100mg",
     description: `
   <ul class="list-disc pl-5 space-y-2">
@@ -283,6 +293,7 @@ export const products = [
     price: 109,
     units: "Per Strip",
     name: "Cefisud 200MG Tablets",
+    caption: "Strip Of 10 Tablets",
     combination: "Cefixime-200mg",
     description: `
     <ul class="list-disc pl-5 space-y-2">
@@ -310,6 +321,7 @@ export const products = [
     price: 95,
     units: "Per Strip",
     name: "Sudofenac MR Tablets",
+    caption: "Strip Of 10 Tablets",
     combination: "Aceclofenac 100mg + Paracetamol 325mg + Chlorzoxazone 250mg",
     description: `
   <ul class="list-disc pl-5 space-y-2">
@@ -353,6 +365,7 @@ export const products = [
     price: 110,
     units: "Per Strip",
     name: "Sudzee 500MG Tablets",
+    caption: "Strip Of 5 Tablets",
     combination: "Azithromycin-500mg",
     description: `
       <ul class="list-disc pl-5 space-y-2">
@@ -387,6 +400,7 @@ export const products = [
     price: 82,
     units: "Per Strip",
     name: "Sudorox-DT Tablets",
+    caption: "Strip Of 10 Tablets",
     combination: "Piroxicam 20mg",
     description: `
   <ul class="list-disc pl-5 space-y-2">
@@ -415,6 +429,7 @@ export const products = [
     price: 105,
     units: "Per Strip",
     name: "Sudofenac-SP Tablets",
+    caption: "Strip Of 10 Tablets",
     combination: " Aceclofenac 100mg + Paracetamol 325mg + Serratiopeptidase 10mg",
     description: `
       The combination of Aceclofenac, Paracetamol, and Serratiopeptidase provides:
@@ -447,6 +462,7 @@ export const products = [
     price: 26,
     units: "Per Injection",
     name: "Tramasud Injection 2ML",
+    caption: "Pack Of 1 Injection",
     combination: "Tramadol 50mg",
     description: `
   <ul class="list-disc pl-5 space-y-2">
@@ -468,6 +484,7 @@ export const products = [
     price: 204,
     units: "Per Strip",
     name: "Sudoxycalv 625MG Tablets",
+    caption: "Strip Of 10 Tablets",
     combination: "Amoxicillin 500mg + Clavulanate Potassium 125mg",
     description: `
   <ul class="list-disc pl-5 space-y-2">
@@ -497,6 +514,7 @@ export const products = [
     price: 110,
     units: "Per Bottle",
     name: "Sudocal Syrup",
+    caption: "Pack Of 1 Bottle",
     combination: "Elementan Calcium 250mg + Vitamin D3 I.P. 125IU",
     description: `
   <ul class="list-disc pl-5 space-y-2">
@@ -515,6 +533,7 @@ export const products = [
     price: 99,
     units: "Per Bottle",
     name: "Painosud Oil",
+    caption: "Pack Of 1 Bottle",
     combination: "Eucalyptus 0.5+Turpentine 1.0+camphor 6%+Methyl Salicylate 15%+rantanjot 2.5% +Nutmeg 1%+ Methol 1%+Clove Oil 1%",
     description: `
       <ul class="list-disc pl-5 space-y-2">
@@ -533,6 +552,7 @@ export const products = [
     price: 40,
     units: "Per Strip",
     name: "Panosud 40 Tablets",
+    caption: "Strip Of 10 Tablets",
     combination: "Pantoprazole 40mg",
     description: `
   <ul class="list-disc pl-5 space-y-2">
@@ -552,6 +572,7 @@ export const products = [
     price: 90,
     units: "Per Strip",
     name: "Panosud DSR Tablets",
+    caption: "Strip Of 10 Tablets",
     combination: "Pantoprazole 40mg + Domperidone 30mg",
     description: `
       <ul class="list-disc pl-5 space-y-2">
@@ -579,6 +600,7 @@ export const products = [
     price: 20,
     units: "Per Strip",
     name: "Parsud 650 Tablets",
+    caption: "Strip Of 10 Tablets",
     combination: "Paracetamol 650mg",
     description: `
   <ul class="list-disc pl-5 space-y-2">
@@ -598,6 +620,7 @@ export const products = [
     price: 100,
     units: "Per Strip",
     name: "Sudocal 500 Tablets",
+    caption: "Strip Of 15 Tablets",
     combination: "Calcium Cidrate 500mg",
     description: `
       <ul class="list-disc pl-5 space-y-2">
@@ -618,6 +641,7 @@ export const products = [
     price: 100,
     units: "Per Strip",
     name: "Sudoxicab 90 Tablets",
+    caption: "Strip Of 10 Tablets",
     combination: "Etoricoxib",
     description: `
   <ul class="list-disc pl-5 space-y-2">
@@ -639,6 +663,7 @@ export const products = [
     price: 13.35,
     units: "Per Bottle",
     name: "Sudonem Injection",
+    caption: "Pack Of 1 Injection",
     combination: "Ondansetron Hydrochloride Dihydride",
     description: `
       <ul class="list-disc pl-5 space-y-2">
@@ -657,6 +682,7 @@ export const products = [
     price: 55,
     units: "Per Injection",
     name: "Panosud Injection",
+    caption: "Pack Of 1 Injection",
     combination: "Pantoprazole 40mg",
     description: `
       <ul class="list-disc pl-5 space-y-2">
@@ -675,6 +701,7 @@ export const products = [
     price: 90,
     units: "Per Gel",
     name: "Sudofast Gel",
+    caption: "Pack Of 1 Gel",
     combination: "Linseed oil + Diclofenac + Methyl Salicylate + Menthol",
     description: `
       <ul class="list-disc pl-5 space-y-2">
@@ -704,6 +731,7 @@ export const products = [
     price: 5,
     units: "Per Injection",
     name: "Sudofast Injection",
+    caption: "Pack Of 1 Injection",
     combination: "Diclofenac Sodium 25mg/ml",
     description: `
   <ul class="list-disc pl-5 space-y-2">
@@ -732,6 +760,7 @@ export const products = [
     price: 65,
     units: "Per Strip",
     name: "Glimisud M2 Tablets",
+    caption: "Strip Of 10 Tablets",
     combination: "Glimepiride + Metformin HCI 2mg/500mg",
     description: `
   <ul class="list-disc pl-5 space-y-2">
@@ -751,6 +780,7 @@ export const products = [
     price: 90,
     units: "Per Strip",
     name: "Sudofast D Tablets",
+    caption: "Strip Of 10 Tablets",
     combination: " Diclofenac potassium 50mg + Serratiopeptidase 10mg",
     description: `
   <ul class="list-disc pl-5 space-y-2">
@@ -770,6 +800,7 @@ export const products = [
     price: 90,
     units: "Per Bottle",
     name: "Parasud IV Infusion",
+    caption: "Pack Of 1 Bottle",
     combination: " Data Not Found",
     description: `
   Data Not Found

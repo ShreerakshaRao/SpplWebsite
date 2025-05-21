@@ -16,23 +16,65 @@ interface ProductCardProps {
   units: string;
   slug: string;
   name: string;
+  caption: string;
+
 }
 
-const ProductCard = ({ image, price, units, slug, name }: ProductCardProps) => (
+// const ProductCard = ({ image, price, units, slug, name }: ProductCardProps) => (
+//   <Link href={`/products/${slug}`}>
+//     <div className="cursor-pointer mx-3">
+//       <Image src={image} alt="Product Image" width={250} height={250} />
+//       <div className="text-base font-medium mb-3 px-3">{name}</div>
+//       <div className="w-[302px] h-[48px] flex justify-between px-5 items-center text-lg bg-[#F4F0EF] shadow-inner backdrop-blur-md relative">
+//         <span className="font-medium">₹{price}</span>
+//         <span className="flex items-center space-x-1 text-gray-500">
+//           {units}
+//         </span>
+//       </div>
+//     </div>
+//   </Link>
+// );
+
+
+const ProductCard = ({
+  image,
+  price,
+  units,
+  slug,
+  name,
+  caption,
+}: ProductCardProps) => (
   <Link href={`/products/${slug}`}>
-    <div className="cursor-pointer mx-3">
-      <Image src={image} alt="Product Image" width={250} height={250} />
-      <div className="text-base font-medium mb-3 px-3">{name}</div>
-      <div className="w-[302px] h-[48px] flex justify-between px-5 items-center text-lg bg-[#F4F0EF] shadow-inner backdrop-blur-md relative">
-        <span className="font-medium">₹{price}</span>
-        <span className="flex items-center space-x-1 text-gray-500">
-          {units}
-        </span>
+    <div className="group relative cursor-pointer mx-2.5 w-[302px] h-[400px] border border-gray-50 shadow-lg  overflow-hidden">
+      <div
+        className="absolute inset-0 z-0 blur-lg opacity-40 bg-cover shadow-[0_0_8px_rgba(0,0,0,0.25)] scale-125"
+        style={{ backgroundImage: `url(${image})` }}
+      ></div>
+
+      <div className="relative z-10 flex flex-col justify-between h-full">
+        <div className="flex justify-center p-10 transition-transform duration-300 group-hover:scale-105">
+          <Image
+            src={image}
+            alt="Product Image"
+            width={200}
+            height={200}
+            className="rounded-lg"
+          />
+        </div>
+
+        <div className="text-base px-5">
+          <div className="text-[#0A0A0A] font-medium transition-colors duration-300 group-hover:text-[#008080]">{name}</div>
+          <div className="text-[#484646] font-normal">{caption}</div>
+        </div>
+
+        <div className="w-full h-[48px] px-5 flex justify-between items-center px-3 bg-[#FFFFFF99] backdrop-blur-3xl">
+          <span className="font-medium text-xl">₹{price}</span>
+          <span className="text-[#797676] text-base font-normal">{units}</span>
+        </div>
       </div>
     </div>
   </Link>
 );
-
 const ProductClient = () => {
   const { query } = useSearch();
   const [isOpen, setIsOpen] = useState(false);
@@ -43,29 +85,29 @@ const ProductClient = () => {
   const categoryFromURL = searchParams.get("category");
 
   const categories = [
-    "Antibacterial",
-    "Pain-Killers",
-    "Ortho-Oil",
-    "Paracetamol",
-    "Gastric",
-    "Nausea-Vomiting",
-    "Calcium",
-    "Iron",
-    "Enzyme",
-    "Diabeties",
+    "Antibiotic",
+    "Analgesic",
+    "Musculoskeletal Oil",
+    "Antipyretic",
+    "Antacids",
+    "Antiemetic",
+    "Calcium Supplement",
+    "Iron Replenishment",
+    "Biocatalyst",
+    "Antidiabetic",
   ];
 
   const categorySlugMap: Record<string, string[]> = {
-    Antibacterial: ["13", "10", "11", "17", "9"],
-    "Pain-Killers": ["12", "15", "14", "16", "5", "24"],
-    "Ortho-Oil": ["19"],
-    Paracetamol: ["22"],
-    Gastric: ["20", "21", "26"],
-    "Nausea-Vomiting": ["25"],
-    Calcium: ["18", "23"],
-    Iron: ["1", "2", "4"],
-    Enzyme: ["3"],
-    Diabeties: ["8", "6", "7"],
+    "Antibiotic": ["13", "10", "11", "17", "9"],
+    "Analgesic": ["12", "15", "14", "16", "5", "24"],
+    "Musculoskeletal Oil": ["19"],
+    "Antipyretic": ["22"],
+    "Antacids": ["20", "21", "26"],
+    "Antiemetic": ["25"],
+    "Calcium Supplement": ["18", "23"],
+    "Iron Replenishment": ["1", "2", "4"],
+    "Biocatalyst": ["3"], 
+    "Antidiabetic": ["8", "6", "7", "29"],
   };
 
   const toggleCategory = (category: string) => {
@@ -156,8 +198,9 @@ const ProductClient = () => {
                     type="checkbox"
                     checked={selectedCategories.includes(category)}
                     onChange={() => toggleCategory(category)}
+                    className="cursor-pointer"
                   />
-                  <span>{category}</span>
+                  <span className="cursor-pointer">{category}</span>
                 </label>
               ))}
             </div>
