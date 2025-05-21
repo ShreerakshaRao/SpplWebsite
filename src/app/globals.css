@@ -5,43 +5,46 @@
   --foreground: #171717;
 }
 
-@theme inline {
+:root {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-geist-sans, Arial, Helvetica, sans-serif);
+  --font-mono: var(--font-geist-mono, monospace);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    /* --background: #0a0a0a;
-    --foreground: #ededed; */
-
     --PRIMARY-TEAL:  #008080; 
     --PRIMARY-GRAY: #433E3F;
     --SECONDARY-GRAY: #444444;
   }
 }
 
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
 @layer base {
-body {
-  /* background: var(--background); */
-  /* color: var(--foreground); */
-  font-family: Arial, Helvetica, sans-serif;
-}
+  body {
+    background: #fff; /* Set background to white */
+    color: var(--foreground);
+    font-family: var(--font-sans);
+    min-height: 100vh;
+  }
 
-.bg-primaryTeal {
-  background-color: var(--PRIMARY-TEAL);
+  .bg-primaryTeal {
+    background-color: var(--PRIMARY-TEAL);
+  }
 
-}
+  .border-Gray {
+    border-color: var(--PRIMARY-GRAY);
+  }
 
-
-.border-Gray {
-  border-color: var(--PRIMARY-GRAY);
-
-}
-
-.text_Gray {
-  color :var(--SECONDARY-GRAY);
-}
+  .text_Gray {
+    color: var(--SECONDARY-GRAY);
+  }
 }

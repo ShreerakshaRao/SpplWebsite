@@ -12,20 +12,18 @@ export const products = [
         <li>Offers the highest absorption quotient (34%).</li>
         <li>Shows a 93.3% clinical success rate.</li>
       </ul>
-  
       <li>Recommended in:</li>
       <ul style="list-style-type: circle; padding-left: 1.5rem;">
         <li>Pregnancy</li>
         <li>Lactation</li>
         <li>Iron-deficiency anaemia</li>
       </ul>
-  
       <li>Folic acid helps in the maturation of red blood cells (RBCs).</li>
       <li>Zinc promotes the growth and development of RBCs.</li>
       <li>Zinc is essential for normal fetal growth and milk production during lactation.</li>
     </ul>
-  `,
-
+    `,
+    
     slug: "1",
   },
   {
@@ -55,7 +53,7 @@ export const products = [
   {
     image: "/products/Sudzyme-Syrup.svg",
     price: 105,
-    units: "Per Bottel",
+    units: "Per Bottle",
     name: "Sudzyme Syrup",
     combination: "Digestive 200ml Syrup",
     description: `
@@ -779,3 +777,4 @@ export const products = [
 
   },
 ];
+

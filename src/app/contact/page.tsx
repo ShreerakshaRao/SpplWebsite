@@ -19,8 +19,6 @@ const Page = () => {
   const [loading, setLoading] = useState(false);
   const [, setResponseMessage] = useState("");
 
-//   const [responseMessage, setResponseMessage] = useState("");
-
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
@@ -71,8 +69,6 @@ const Page = () => {
             for Support
           </div>
         </div>
-
-        <div className="border-b-2 border-gray-400"></div>
 
         <div className="lg:m-25 m-2 flex flex-col lg:flex-row w-full max-w-full overflow-x-hidden lg:w-[1300px] h-auto lg:h-[625px] bg-white border border-gray-100 shadow-[0_8px_30px_rgba(0,0,0,0.25)]">
           <div className="w-full lg:basis-[60%]">
@@ -169,41 +165,58 @@ const Page = () => {
           </div>
 
           <div className="bg-[#004C4C] text-white w-full max-w-full lg:basis-[40%] sm:m-6 px-6 sm:px-10 space-y-12 relative">
+            {/* MAIL US - clickable */}
             <div className="mt-10">
               <div className="font-medium text-xl">Mail Us</div>
               <div className="font-normal text-sm">
                 Mail us your query - we will reply within 48 hours
               </div>
-              <div className="flex space-x-2 font-medium text-base items-center pt-3">
-                <IoMail /> <span className="underline">info@tiameds.ai</span>
-              </div>
+              <a
+  href="https://mail.google.com/mail/?view=cm&to=info@tiameds.ai"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="flex space-x-2 font-medium text-base items-center pt-3 hover:underline"
+>
+  <IoMail /> <span className="font-medium">info@tiameds.ai</span>
+</a>
             </div>
 
+            {/* CALL US - clickable */}
             <div>
               <div className="font-medium text-xl">Call Us</div>
               <div className="font-normal text-sm">
                 Call our team Mon-Sat from 9am to 7pm
               </div>
-              <div className="flex space-x-2 font-medium text-base items-center pt-3">
+              <a
+                href="tel:+919686812082"
+                className="flex space-x-2 font-medium text-base items-center pt-3 hover:underline"
+              >
                 <IoIosCall />
-                <span className="underline">+91 968 681 2082</span>
-              </div>
+                <span className="font-medium">+91 968 681 2082</span>
+              </a>
             </div>
 
+            {/* VISIT US - clickable */}
             <div>
-              <div className="font-medium text-xl">Visit Us</div>
-              <div className="font-normal text-sm">
-                Visit our office Mon-Sat from 9am to 8pm
-              </div>
-              <div className="flex space-x-2 font-medium text-base items-center pt-3">
-                <IoLocationSharp />
-                <span className="underline">
-                  Sy. No. 59, 2nd Floor, Dakshina Murthy Towers,
-                  <br /> Devanooru, Rajeevnagara 2nd Stage,
-                  <br /> Udayagiri, Mysore 570019.
-                </span>
-              </div>
-            </div>
+  <div className="font-medium text-xl">Visit Us</div>
+  <div className="font-normal text-sm">
+    Visit our office Mon-Sat from 9am to 8pm
+  </div>
+  <a
+    href="https://www.google.com/maps/place/Dakshina+Murthy+Towers/@12.3350797,76.6659096,17z/data=!3m1!4b1!4m6!3m5!1s0x3baf711ac4a936a3:0x879214aef093b19d!8m2!3d12.3350745!4d76.6684845!16s%2Fg%2F11ybt6t057!5m1!1e2?entry=ttu&g_ep=EgoyMDI1MDUxMy4xIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex space-x-2 font-medium text-base items-center pt-3 hover:underline"
+  >
+    <IoLocationSharp />
+    <span className="font-medium">
+      Sy. No. 59, 2nd Floor, Dakshina Murthy Towers,
+      <br /> Devanooru, Rajeevnagara 2nd Stage,
+      <br /> Udayagiri, Mysore 570019.
+    </span>
+  </a>
+</div>
+
 
             <div className="absolute bottom-0 right-0 w-40 h-40 rounded-tl-full bg-gradient-to-br from-[#E8F6F6] to-[#004C4C]"></div>
           </div>

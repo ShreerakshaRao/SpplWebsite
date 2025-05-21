@@ -3,9 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import {Menu, X } from "lucide-react";
-
-// import { useSearch } from "../context/SearchContext";
+import { Menu, X, Search } from "lucide-react";
 
 const navLinks = [
   { name: "Home", href: "/" },
@@ -16,53 +14,32 @@ const navLinks = [
 ];
 
 const Header = () => {
-  // const { query, setQuery } = useSearch();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [query, setQuery] = useState("");
 
-  // const handleSearch = (e: React.FormEvent) => {
-  //   e.preventDefault();
-  // };
+  console.log(query,"query");
 
   return (
-    <header className="w-full px-4 md:px-16 py-4 shadow-[0_4px_6px_-4px_rgba(0,0,0,0.5)] bg-white">
-      <div className="flex justify-between items-center">
-
-        <div className="flex items-center space-x-4 md:space-x-14 flex-shrink-0">
-          <Image
-            src="/SudhanandLogo1.svg"
-            alt="Company Logo"
-            width={40}
-            height={40}
-          />
-
-          <div className="text-base md:text-4xl font-normal whitespace-nowrap text-[#008080]">
-            Sudhanand Pharmacies
-          </div>
-        </div>
-
-        {/* Search bar (hidden on small screens) */}
-        {/* <form
-            onSubmit={handleSearch}
-            className="hidden md:flex items-center border border-gray-600 w-96 h-9 rounded-md"
-          >
-            <div className="flex items-center px-3">
-              <Search className="w-4 h-4 text-gray-400" />
-            </div>
-            <input
-              type="text"
-              placeholder="Search"
-              value={query}
-              onChange={(e) => setQuery(e.target.value)}
-              className="placeholder-gray-400 outline-none px-2 py-2 flex-1 bg-transparent"
+    <header className="sticky top-0 z-50 w-full px-4 md:px-16 py-4 shadow-[0_4px_6px_-4px_rgba(0,0,0,0.5)] bg-white">
+      <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-3 md:gap-0">
+        {/* Logo and Brand */}
+        <div className="flex items-center space-x-3 md:space-x-7 flex-shrink-0">
+          <Link href="/">
+            <Image
+              src="/SudhanandLogo1.svg"
+              alt="Company Logo"
+              width={40}
+              height={40}
             />
-            <button
-              type="submit"
-              className="bg-primaryTeal text-white px-4 py-2 h-9"
-            >
-              Search
-            </button>
-          </form> */}
-        {/* </div> */}
+          </Link>
+          <Link href="/">
+            <div className="cursor-pointer text-base md:text-2xl font-normal text-[#008080]">
+              <span>
+                Sudhanand Pharmacies<br className="block md:hidden" />
+              </span>
+            </div>
+          </Link>
+        </div>
 
         {/* Right side - Nav and contact */}
         <div className="hidden md:flex items-center space-x-6 text-lg font-normal">
@@ -71,12 +48,11 @@ const Header = () => {
               {name}
             </Link>
           ))}
-
         </div>
 
         {/* Mobile menu toggle */}
         <button
-          className="md:hidden focus:outline-none"
+          className="md:hidden focus:outline-none absolute right-4 top-4"
           onClick={() => setMenuOpen(!menuOpen)}
         >
           {menuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -84,17 +60,13 @@ const Header = () => {
       </div>
 
       {/* Mobile dropdown menu */}
- 
       {menuOpen && (
         <div className="mt-4 md:hidden flex flex-col items-center space-y-4 text-base text-center">
-       
-
           {navLinks.map(({ name, href }) => (
             <Link key={name} href={href} className="hover:underline">
               {name}
             </Link>
           ))}
-
         </div>
       )}
     </header>

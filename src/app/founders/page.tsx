@@ -174,7 +174,7 @@ const Page = () => {
             <div className="m-20 flex">
               <div className="w-[40%]">
                 <Image
-                  src="/team/FounderImg2.svg"
+                  src="/team/FounderImg2.jpeg"
                   alt="Image"
                   width={430}
                   height={430}
